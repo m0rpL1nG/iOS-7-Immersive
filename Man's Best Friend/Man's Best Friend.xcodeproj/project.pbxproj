@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF48FE9B18CBC4F900BC34E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48FE9A18CBC4F900BC34E6 /* Foundation.framework */; };
+		AF48FE9D18CBC4F900BC34E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48FE9C18CBC4F900BC34E6 /* CoreGraphics.framework */; };
+		AF48FE9F18CBC4F900BC34E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48FE9E18CBC4F900BC34E6 /* UIKit.framework */; };
+		AF48FEA518CBC4F900BC34E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEA318CBC4F900BC34E6 /* InfoPlist.strings */; };
+		AF48FEA718CBC4F900BC34E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF48FEA618CBC4F900BC34E6 /* main.m */; };
+		AF48FEAB18CBC4F900BC34E6 /* PYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF48FEAA18CBC4F900BC34E6 /* PYLAppDelegate.m */; };
+		AF48FEAE18CBC4F900BC34E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEAC18CBC4F900BC34E6 /* Main.storyboard */; };
+		AF48FEB118CBC4F900BC34E6 /* PYLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF48FEB018CBC4F900BC34E6 /* PYLViewController.m */; };
+		AF48FEB318CBC4F900BC34E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEB218CBC4F900BC34E6 /* Images.xcassets */; };
+		AF48FEBA18CBC4F900BC34E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48FEB918CBC4F900BC34E6 /* XCTest.framework */; };
+		AF48FEBB18CBC4F900BC34E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48FE9A18CBC4F900BC34E6 /* Foundation.framework */; };
+		AF48FEBC18CBC4F900BC34E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48FE9E18CBC4F900BC34E6 /* UIKit.framework */; };
+		AF48FEC418CBC4F900BC34E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEC218CBC4F900BC34E6 /* InfoPlist.strings */; };
+		AF48FEC618CBC4F900BC34E6 /* Man_s_Best_FriendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF48FEC518CBC4F900BC34E6 /* Man_s_Best_FriendTests.m */; };
+		AF48FED718CBC85B00BC34E6 /* PYLDog.m in Sources */ = {isa = PBXBuildFile; fileRef = AF48FED618CBC85B00BC34E6 /* PYLDog.m */; };
+		AF48FEDF18CBC8D900BC34E6 /* Bo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEDA18CBC8D900BC34E6 /* Bo.jpg */; };
+		AF48FEE018CBC8D900BC34E6 /* BorderCollie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEDB18CBC8D900BC34E6 /* BorderCollie.jpg */; };
+		AF48FEE118CBC8D900BC34E6 /* ItalianGreyhound.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEDC18CBC8D900BC34E6 /* ItalianGreyhound.jpg */; };
+		AF48FEE218CBC8D900BC34E6 /* JRT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEDD18CBC8D900BC34E6 /* JRT.jpg */; };
+		AF48FEE318CBC8D900BC34E6 /* St.Bernard.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEDE18CBC8D900BC34E6 /* St.Bernard.JPG */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF48FEBD18CBC4F900BC34E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF48FE8F18CBC4F900BC34E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF48FE9618CBC4F900BC34E6;
+			remoteInfo = "Man's Best Friend";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF48FE9718CBC4F900BC34E6 /* Man's Best Friend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Man's Best Friend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF48FE9A18CBC4F900BC34E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF48FE9C18CBC4F900BC34E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF48FE9E18CBC4F900BC34E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF48FEA218CBC4F900BC34E6 /* Man's Best Friend-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Man's Best Friend-Info.plist"; sourceTree = "<group>"; };
+		AF48FEA418CBC4F900BC34E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF48FEA618CBC4F900BC34E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF48FEA818CBC4F900BC34E6 /* Man's Best Friend-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Man's Best Friend-Prefix.pch"; sourceTree = "<group>"; };
+		AF48FEA918CBC4F900BC34E6 /* PYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYLAppDelegate.h; sourceTree = "<group>"; };
+		AF48FEAA18CBC4F900BC34E6 /* PYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYLAppDelegate.m; sourceTree = "<group>"; };
+		AF48FEAD18CBC4F900BC34E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF48FEAF18CBC4F900BC34E6 /* PYLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYLViewController.h; sourceTree = "<group>"; };
+		AF48FEB018CBC4F900BC34E6 /* PYLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYLViewController.m; sourceTree = "<group>"; };
+		AF48FEB218CBC4F900BC34E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF48FEB818CBC4F900BC34E6 /* Man's Best FriendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Man's Best FriendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF48FEB918CBC4F900BC34E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AF48FEC118CBC4F900BC34E6 /* Man's Best FriendTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Man's Best FriendTests-Info.plist"; sourceTree = "<group>"; };
+		AF48FEC318CBC4F900BC34E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF48FEC518CBC4F900BC34E6 /* Man_s_Best_FriendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Man_s_Best_FriendTests.m; sourceTree = "<group>"; };
+		AF48FED518CBC85B00BC34E6 /* PYLDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLDog.h; sourceTree = "<group>"; };
+		AF48FED618CBC85B00BC34E6 /* PYLDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLDog.m; sourceTree = "<group>"; };
+		AF48FEDA18CBC8D900BC34E6 /* Bo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bo.jpg; sourceTree = "<group>"; };
+		AF48FEDB18CBC8D900BC34E6 /* BorderCollie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BorderCollie.jpg; sourceTree = "<group>"; };
+		AF48FEDC18CBC8D900BC34E6 /* ItalianGreyhound.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ItalianGreyhound.jpg; sourceTree = "<group>"; };
+		AF48FEDD18CBC8D900BC34E6 /* JRT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JRT.jpg; sourceTree = "<group>"; };
+		AF48FEDE18CBC8D900BC34E6 /* St.Bernard.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = St.Bernard.JPG; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF48FE9418CBC4F900BC34E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF48FE9D18CBC4F900BC34E6 /* CoreGraphics.framework in Frameworks */,
+				AF48FE9F18CBC4F900BC34E6 /* UIKit.framework in Frameworks */,
+				AF48FE9B18CBC4F900BC34E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF48FEB518CBC4F900BC34E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF48FEBA18CBC4F900BC34E6 /* XCTest.framework in Frameworks */,
+				AF48FEBC18CBC4F900BC34E6 /* UIKit.framework in Frameworks */,
+				AF48FEBB18CBC4F900BC34E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF48FE8E18CBC4F900BC34E6 = {
+			isa = PBXGroup;
+			children = (
+				AF48FEA018CBC4F900BC34E6 /* Man's Best Friend */,
+				AF48FEBF18CBC4F900BC34E6 /* Man's Best FriendTests */,
+				AF48FE9918CBC4F900BC34E6 /* Frameworks */,
+				AF48FE9818CBC4F900BC34E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF48FE9818CBC4F900BC34E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FE9718CBC4F900BC34E6 /* Man's Best Friend.app */,
+				AF48FEB818CBC4F900BC34E6 /* Man's Best FriendTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF48FE9918CBC4F900BC34E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FE9A18CBC4F900BC34E6 /* Foundation.framework */,
+				AF48FE9C18CBC4F900BC34E6 /* CoreGraphics.framework */,
+				AF48FE9E18CBC4F900BC34E6 /* UIKit.framework */,
+				AF48FEB918CBC4F900BC34E6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF48FEA018CBC4F900BC34E6 /* Man's Best Friend */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FED818CBC8B500BC34E6 /* Resources */,
+				AF48FED418CBC79500BC34E6 /* Model */,
+				AF48FED318CBC79000BC34E6 /* View */,
+				AF48FED218CBC78400BC34E6 /* AppDelegate */,
+				AF48FED118CBC77C00BC34E6 /* Controller */,
+				AF48FEB218CBC4F900BC34E6 /* Images.xcassets */,
+				AF48FEA118CBC4F900BC34E6 /* Supporting Files */,
+			);
+			path = "Man's Best Friend";
+			sourceTree = "<group>";
+		};
+		AF48FEA118CBC4F900BC34E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FEA218CBC4F900BC34E6 /* Man's Best Friend-Info.plist */,
+				AF48FEA318CBC4F900BC34E6 /* InfoPlist.strings */,
+				AF48FEA618CBC4F900BC34E6 /* main.m */,
+				AF48FEA818CBC4F900BC34E6 /* Man's Best Friend-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF48FEBF18CBC4F900BC34E6 /* Man's Best FriendTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FEC518CBC4F900BC34E6 /* Man_s_Best_FriendTests.m */,
+				AF48FEC018CBC4F900BC34E6 /* Supporting Files */,
+			);
+			path = "Man's Best FriendTests";
+			sourceTree = "<group>";
+		};
+		AF48FEC018CBC4F900BC34E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FEC118CBC4F900BC34E6 /* Man's Best FriendTests-Info.plist */,
+				AF48FEC218CBC4F900BC34E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF48FED118CBC77C00BC34E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FEAF18CBC4F900BC34E6 /* PYLViewController.h */,
+				AF48FEB018CBC4F900BC34E6 /* PYLViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AF48FED218CBC78400BC34E6 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FEA918CBC4F900BC34E6 /* PYLAppDelegate.h */,
+				AF48FEAA18CBC4F900BC34E6 /* PYLAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		AF48FED318CBC79000BC34E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FEAC18CBC4F900BC34E6 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AF48FED418CBC79500BC34E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FED518CBC85B00BC34E6 /* PYLDog.h */,
+				AF48FED618CBC85B00BC34E6 /* PYLDog.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AF48FED818CBC8B500BC34E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FED918CBC8B500BC34E6 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AF48FED918CBC8B500BC34E6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AF48FEDA18CBC8D900BC34E6 /* Bo.jpg */,
+				AF48FEDB18CBC8D900BC34E6 /* BorderCollie.jpg */,
+				AF48FEDC18CBC8D900BC34E6 /* ItalianGreyhound.jpg */,
+				AF48FEDD18CBC8D900BC34E6 /* JRT.jpg */,
+				AF48FEDE18CBC8D900BC34E6 /* St.Bernard.JPG */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF48FE9618CBC4F900BC34E6 /* Man's Best Friend */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF48FEC918CBC4F900BC34E6 /* Build configuration list for PBXNativeTarget "Man's Best Friend" */;
+			buildPhases = (
+				AF48FE9318CBC4F900BC34E6 /* Sources */,
+				AF48FE9418CBC4F900BC34E6 /* Frameworks */,
+				AF48FE9518CBC4F900BC34E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Man's Best Friend";
+			productName = "Man's Best Friend";
+			productReference = AF48FE9718CBC4F900BC34E6 /* Man's Best Friend.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF48FEB718CBC4F900BC34E6 /* Man's Best FriendTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF48FECC18CBC4F900BC34E6 /* Build configuration list for PBXNativeTarget "Man's Best FriendTests" */;
+			buildPhases = (
+				AF48FEB418CBC4F900BC34E6 /* Sources */,
+				AF48FEB518CBC4F900BC34E6 /* Frameworks */,
+				AF48FEB618CBC4F900BC34E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF48FEBE18CBC4F900BC34E6 /* PBXTargetDependency */,
+			);
+			name = "Man's Best FriendTests";
+			productName = "Man's Best FriendTests";
+			productReference = AF48FEB818CBC4F900BC34E6 /* Man's Best FriendTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF48FE8F18CBC4F900BC34E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PYL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Pierre-Yves LEBECQ";
+				TargetAttributes = {
+					AF48FEB718CBC4F900BC34E6 = {
+						TestTargetID = AF48FE9618CBC4F900BC34E6;
+					};
+				};
+			};
+			buildConfigurationList = AF48FE9218CBC4F900BC34E6 /* Build configuration list for PBXProject "Man's Best Friend" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF48FE8E18CBC4F900BC34E6;
+			productRefGroup = AF48FE9818CBC4F900BC34E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF48FE9618CBC4F900BC34E6 /* Man's Best Friend */,
+				AF48FEB718CBC4F900BC34E6 /* Man's Best FriendTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF48FE9518CBC4F900BC34E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF48FEE318CBC8D900BC34E6 /* St.Bernard.JPG in Resources */,
+				AF48FEE118CBC8D900BC34E6 /* ItalianGreyhound.jpg in Resources */,
+				AF48FEB318CBC4F900BC34E6 /* Images.xcassets in Resources */,
+				AF48FEE218CBC8D900BC34E6 /* JRT.jpg in Resources */,
+				AF48FEA518CBC4F900BC34E6 /* InfoPlist.strings in Resources */,
+				AF48FEE018CBC8D900BC34E6 /* BorderCollie.jpg in Resources */,
+				AF48FEDF18CBC8D900BC34E6 /* Bo.jpg in Resources */,
+				AF48FEAE18CBC4F900BC34E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF48FEB618CBC4F900BC34E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF48FEC418CBC4F900BC34E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF48FE9318CBC4F900BC34E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF48FEB118CBC4F900BC34E6 /* PYLViewController.m in Sources */,
+				AF48FEAB18CBC4F900BC34E6 /* PYLAppDelegate.m in Sources */,
+				AF48FED718CBC85B00BC34E6 /* PYLDog.m in Sources */,
+				AF48FEA718CBC4F900BC34E6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF48FEB418CBC4F900BC34E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF48FEC618CBC4F900BC34E6 /* Man_s_Best_FriendTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF48FEBE18CBC4F900BC34E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF48FE9618CBC4F900BC34E6 /* Man's Best Friend */;
+			targetProxy = AF48FEBD18CBC4F900BC34E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF48FEA318CBC4F900BC34E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF48FEA418CBC4F900BC34E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF48FEAC18CBC4F900BC34E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF48FEAD18CBC4F900BC34E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF48FEC218CBC4F900BC34E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF48FEC318CBC4F900BC34E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF48FEC718CBC4F900BC34E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF48FEC818CBC4F900BC34E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF48FECA18CBC4F900BC34E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Man's Best Friend/Man's Best Friend-Prefix.pch";
+				INFOPLIST_FILE = "Man's Best Friend/Man's Best Friend-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AF48FECB18CBC4F900BC34E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Man's Best Friend/Man's Best Friend-Prefix.pch";
+				INFOPLIST_FILE = "Man's Best Friend/Man's Best Friend-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AF48FECD18CBC4F900BC34E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Man's Best Friend.app/Man's Best Friend";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Man's Best Friend/Man's Best Friend-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Man's Best FriendTests/Man's Best FriendTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AF48FECE18CBC4F900BC34E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Man's Best Friend.app/Man's Best Friend";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Man's Best Friend/Man's Best Friend-Prefix.pch";
+				INFOPLIST_FILE = "Man's Best FriendTests/Man's Best FriendTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF48FE9218CBC4F900BC34E6 /* Build configuration list for PBXProject "Man's Best Friend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF48FEC718CBC4F900BC34E6 /* Debug */,
+				AF48FEC818CBC4F900BC34E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF48FEC918CBC4F900BC34E6 /* Build configuration list for PBXNativeTarget "Man's Best Friend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF48FECA18CBC4F900BC34E6 /* Debug */,
+				AF48FECB18CBC4F900BC34E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF48FECC18CBC4F900BC34E6 /* Build configuration list for PBXNativeTarget "Man's Best FriendTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF48FECD18CBC4F900BC34E6 /* Debug */,
+				AF48FECE18CBC4F900BC34E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF48FE8F18CBC4F900BC34E6 /* Project object */;
+}
