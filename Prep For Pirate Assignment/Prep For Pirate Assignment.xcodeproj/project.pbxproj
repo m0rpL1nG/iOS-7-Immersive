@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF7B593518CCC88700BFC810 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B593418CCC88700BFC810 /* Foundation.framework */; };
+		AF7B593718CCC88700BFC810 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B593618CCC88700BFC810 /* CoreGraphics.framework */; };
+		AF7B593918CCC88700BFC810 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B593818CCC88700BFC810 /* UIKit.framework */; };
+		AF7B593F18CCC88700BFC810 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF7B593D18CCC88700BFC810 /* InfoPlist.strings */; };
+		AF7B594118CCC88700BFC810 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7B594018CCC88700BFC810 /* main.m */; };
+		AF7B594518CCC88700BFC810 /* PYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7B594418CCC88700BFC810 /* PYLAppDelegate.m */; };
+		AF7B594818CCC88700BFC810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7B594618CCC88700BFC810 /* Main.storyboard */; };
+		AF7B594B18CCC88700BFC810 /* PYLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7B594A18CCC88700BFC810 /* PYLViewController.m */; };
+		AF7B594D18CCC88700BFC810 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7B594C18CCC88700BFC810 /* Images.xcassets */; };
+		AF7B595418CCC88700BFC810 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B595318CCC88700BFC810 /* XCTest.framework */; };
+		AF7B595518CCC88700BFC810 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B593418CCC88700BFC810 /* Foundation.framework */; };
+		AF7B595618CCC88700BFC810 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B593818CCC88700BFC810 /* UIKit.framework */; };
+		AF7B595E18CCC88700BFC810 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF7B595C18CCC88700BFC810 /* InfoPlist.strings */; };
+		AF7B596018CCC88700BFC810 /* Prep_For_Pirate_AssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7B595F18CCC88700BFC810 /* Prep_For_Pirate_AssignmentTests.m */; };
+		AF7B596B18CCCC3E00BFC810 /* PYLAwesomeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7B596A18CCCC3E00BFC810 /* PYLAwesomeClass.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF7B595718CCC88700BFC810 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF7B592918CCC88700BFC810 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF7B593018CCC88700BFC810;
+			remoteInfo = "Prep For Pirate Assignment";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF7B593118CCC88700BFC810 /* Prep For Pirate Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prep For Pirate Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7B593418CCC88700BFC810 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF7B593618CCC88700BFC810 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF7B593818CCC88700BFC810 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF7B593C18CCC88700BFC810 /* Prep For Pirate Assignment-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Prep For Pirate Assignment-Info.plist"; sourceTree = "<group>"; };
+		AF7B593E18CCC88700BFC810 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF7B594018CCC88700BFC810 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF7B594218CCC88700BFC810 /* Prep For Pirate Assignment-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prep For Pirate Assignment-Prefix.pch"; sourceTree = "<group>"; };
+		AF7B594318CCC88700BFC810 /* PYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYLAppDelegate.h; sourceTree = "<group>"; };
+		AF7B594418CCC88700BFC810 /* PYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYLAppDelegate.m; sourceTree = "<group>"; };
+		AF7B594718CCC88700BFC810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF7B594918CCC88700BFC810 /* PYLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYLViewController.h; sourceTree = "<group>"; };
+		AF7B594A18CCC88700BFC810 /* PYLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYLViewController.m; sourceTree = "<group>"; };
+		AF7B594C18CCC88700BFC810 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF7B595218CCC88700BFC810 /* Prep For Pirate AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prep For Pirate AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7B595318CCC88700BFC810 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AF7B595B18CCC88700BFC810 /* Prep For Pirate AssignmentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Prep For Pirate AssignmentTests-Info.plist"; sourceTree = "<group>"; };
+		AF7B595D18CCC88700BFC810 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF7B595F18CCC88700BFC810 /* Prep_For_Pirate_AssignmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prep_For_Pirate_AssignmentTests.m; sourceTree = "<group>"; };
+		AF7B596918CCCC3E00BFC810 /* PYLAwesomeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLAwesomeClass.h; sourceTree = "<group>"; };
+		AF7B596A18CCCC3E00BFC810 /* PYLAwesomeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLAwesomeClass.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF7B592E18CCC88700BFC810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7B593718CCC88700BFC810 /* CoreGraphics.framework in Frameworks */,
+				AF7B593918CCC88700BFC810 /* UIKit.framework in Frameworks */,
+				AF7B593518CCC88700BFC810 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7B594F18CCC88700BFC810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7B595418CCC88700BFC810 /* XCTest.framework in Frameworks */,
+				AF7B595618CCC88700BFC810 /* UIKit.framework in Frameworks */,
+				AF7B595518CCC88700BFC810 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF7B592818CCC88700BFC810 = {
+			isa = PBXGroup;
+			children = (
+				AF7B593A18CCC88700BFC810 /* Prep For Pirate Assignment */,
+				AF7B595918CCC88700BFC810 /* Prep For Pirate AssignmentTests */,
+				AF7B593318CCC88700BFC810 /* Frameworks */,
+				AF7B593218CCC88700BFC810 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF7B593218CCC88700BFC810 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B593118CCC88700BFC810 /* Prep For Pirate Assignment.app */,
+				AF7B595218CCC88700BFC810 /* Prep For Pirate AssignmentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF7B593318CCC88700BFC810 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B593418CCC88700BFC810 /* Foundation.framework */,
+				AF7B593618CCC88700BFC810 /* CoreGraphics.framework */,
+				AF7B593818CCC88700BFC810 /* UIKit.framework */,
+				AF7B595318CCC88700BFC810 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF7B593A18CCC88700BFC810 /* Prep For Pirate Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B594318CCC88700BFC810 /* PYLAppDelegate.h */,
+				AF7B594418CCC88700BFC810 /* PYLAppDelegate.m */,
+				AF7B594618CCC88700BFC810 /* Main.storyboard */,
+				AF7B594918CCC88700BFC810 /* PYLViewController.h */,
+				AF7B594A18CCC88700BFC810 /* PYLViewController.m */,
+				AF7B596918CCCC3E00BFC810 /* PYLAwesomeClass.h */,
+				AF7B596A18CCCC3E00BFC810 /* PYLAwesomeClass.m */,
+				AF7B594C18CCC88700BFC810 /* Images.xcassets */,
+				AF7B593B18CCC88700BFC810 /* Supporting Files */,
+			);
+			path = "Prep For Pirate Assignment";
+			sourceTree = "<group>";
+		};
+		AF7B593B18CCC88700BFC810 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B593C18CCC88700BFC810 /* Prep For Pirate Assignment-Info.plist */,
+				AF7B593D18CCC88700BFC810 /* InfoPlist.strings */,
+				AF7B594018CCC88700BFC810 /* main.m */,
+				AF7B594218CCC88700BFC810 /* Prep For Pirate Assignment-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF7B595918CCC88700BFC810 /* Prep For Pirate AssignmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B595F18CCC88700BFC810 /* Prep_For_Pirate_AssignmentTests.m */,
+				AF7B595A18CCC88700BFC810 /* Supporting Files */,
+			);
+			path = "Prep For Pirate AssignmentTests";
+			sourceTree = "<group>";
+		};
+		AF7B595A18CCC88700BFC810 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B595B18CCC88700BFC810 /* Prep For Pirate AssignmentTests-Info.plist */,
+				AF7B595C18CCC88700BFC810 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF7B593018CCC88700BFC810 /* Prep For Pirate Assignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7B596318CCC88700BFC810 /* Build configuration list for PBXNativeTarget "Prep For Pirate Assignment" */;
+			buildPhases = (
+				AF7B592D18CCC88700BFC810 /* Sources */,
+				AF7B592E18CCC88700BFC810 /* Frameworks */,
+				AF7B592F18CCC88700BFC810 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Prep For Pirate Assignment";
+			productName = "Prep For Pirate Assignment";
+			productReference = AF7B593118CCC88700BFC810 /* Prep For Pirate Assignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF7B595118CCC88700BFC810 /* Prep For Pirate AssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7B596618CCC88700BFC810 /* Build configuration list for PBXNativeTarget "Prep For Pirate AssignmentTests" */;
+			buildPhases = (
+				AF7B594E18CCC88700BFC810 /* Sources */,
+				AF7B594F18CCC88700BFC810 /* Frameworks */,
+				AF7B595018CCC88700BFC810 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF7B595818CCC88700BFC810 /* PBXTargetDependency */,
+			);
+			name = "Prep For Pirate AssignmentTests";
+			productName = "Prep For Pirate AssignmentTests";
+			productReference = AF7B595218CCC88700BFC810 /* Prep For Pirate AssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF7B592918CCC88700BFC810 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PYL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Pierre-Yves LEBECQ";
+				TargetAttributes = {
+					AF7B595118CCC88700BFC810 = {
+						TestTargetID = AF7B593018CCC88700BFC810;
+					};
+				};
+			};
+			buildConfigurationList = AF7B592C18CCC88700BFC810 /* Build configuration list for PBXProject "Prep For Pirate Assignment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF7B592818CCC88700BFC810;
+			productRefGroup = AF7B593218CCC88700BFC810 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF7B593018CCC88700BFC810 /* Prep For Pirate Assignment */,
+				AF7B595118CCC88700BFC810 /* Prep For Pirate AssignmentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF7B592F18CCC88700BFC810 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7B594D18CCC88700BFC810 /* Images.xcassets in Resources */,
+				AF7B593F18CCC88700BFC810 /* InfoPlist.strings in Resources */,
+				AF7B594818CCC88700BFC810 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7B595018CCC88700BFC810 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7B595E18CCC88700BFC810 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF7B592D18CCC88700BFC810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7B596B18CCCC3E00BFC810 /* PYLAwesomeClass.m in Sources */,
+				AF7B594B18CCC88700BFC810 /* PYLViewController.m in Sources */,
+				AF7B594518CCC88700BFC810 /* PYLAppDelegate.m in Sources */,
+				AF7B594118CCC88700BFC810 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7B594E18CCC88700BFC810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7B596018CCC88700BFC810 /* Prep_For_Pirate_AssignmentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF7B595818CCC88700BFC810 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF7B593018CCC88700BFC810 /* Prep For Pirate Assignment */;
+			targetProxy = AF7B595718CCC88700BFC810 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF7B593D18CCC88700BFC810 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF7B593E18CCC88700BFC810 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF7B594618CCC88700BFC810 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF7B594718CCC88700BFC810 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF7B595C18CCC88700BFC810 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF7B595D18CCC88700BFC810 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF7B596118CCC88700BFC810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF7B596218CCC88700BFC810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF7B596418CCC88700BFC810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prep For Pirate Assignment/Prep For Pirate Assignment-Prefix.pch";
+				INFOPLIST_FILE = "Prep For Pirate Assignment/Prep For Pirate Assignment-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AF7B596518CCC88700BFC810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prep For Pirate Assignment/Prep For Pirate Assignment-Prefix.pch";
+				INFOPLIST_FILE = "Prep For Pirate Assignment/Prep For Pirate Assignment-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AF7B596718CCC88700BFC810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Prep For Pirate Assignment.app/Prep For Pirate Assignment";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prep For Pirate Assignment/Prep For Pirate Assignment-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Prep For Pirate AssignmentTests/Prep For Pirate AssignmentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AF7B596818CCC88700BFC810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Prep For Pirate Assignment.app/Prep For Pirate Assignment";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prep For Pirate Assignment/Prep For Pirate Assignment-Prefix.pch";
+				INFOPLIST_FILE = "Prep For Pirate AssignmentTests/Prep For Pirate AssignmentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF7B592C18CCC88700BFC810 /* Build configuration list for PBXProject "Prep For Pirate Assignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7B596118CCC88700BFC810 /* Debug */,
+				AF7B596218CCC88700BFC810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF7B596318CCC88700BFC810 /* Build configuration list for PBXNativeTarget "Prep For Pirate Assignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7B596418CCC88700BFC810 /* Debug */,
+				AF7B596518CCC88700BFC810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF7B596618CCC88700BFC810 /* Build configuration list for PBXNativeTarget "Prep For Pirate AssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7B596718CCC88700BFC810 /* Debug */,
+				AF7B596818CCC88700BFC810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF7B592918CCC88700BFC810 /* Project object */;
+}
