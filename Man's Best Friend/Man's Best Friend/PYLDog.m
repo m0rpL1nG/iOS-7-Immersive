@@ -10,4 +10,9 @@
 
 @implementation PYLDog
 
+- (void)bark
+{
+    NSLog(@"Woof Woof!");
+}
+
 @end

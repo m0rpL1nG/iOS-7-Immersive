@@ -15,4 +15,6 @@
 @property (strong, nonatomic) NSString *breed;
 @property (strong, nonatomic) UIImage *image;
 
+- (void)bark;
+
 @end

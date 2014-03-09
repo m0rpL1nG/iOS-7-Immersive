@@ -27,6 +27,7 @@
 		AF48FEE118CBC8D900BC34E6 /* ItalianGreyhound.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEDC18CBC8D900BC34E6 /* ItalianGreyhound.jpg */; };
 		AF48FEE218CBC8D900BC34E6 /* JRT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEDD18CBC8D900BC34E6 /* JRT.jpg */; };
 		AF48FEE318CBC8D900BC34E6 /* St.Bernard.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AF48FEDE18CBC8D900BC34E6 /* St.Bernard.JPG */; };
+		AF7B58E318CCC00D00BFC810 /* PYLPuppy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7B58E218CCC00D00BFC810 /* PYLPuppy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		AF48FEDC18CBC8D900BC34E6 /* ItalianGreyhound.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ItalianGreyhound.jpg; sourceTree = "<group>"; };
 		AF48FEDD18CBC8D900BC34E6 /* JRT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JRT.jpg; sourceTree = "<group>"; };
 		AF48FEDE18CBC8D900BC34E6 /* St.Bernard.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = St.Bernard.JPG; sourceTree = "<group>"; };
+		AF7B58E118CCC00D00BFC810 /* PYLPuppy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLPuppy.h; sourceTree = "<group>"; };
+		AF7B58E218CCC00D00BFC810 /* PYLPuppy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLPuppy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,8 @@
 			children = (
 				AF48FED518CBC85B00BC34E6 /* PYLDog.h */,
 				AF48FED618CBC85B00BC34E6 /* PYLDog.m */,
+				AF7B58E118CCC00D00BFC810 /* PYLPuppy.h */,
+				AF7B58E218CCC00D00BFC810 /* PYLPuppy.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 			files = (
 				AF48FEB118CBC4F900BC34E6 /* PYLViewController.m in Sources */,
 				AF48FEAB18CBC4F900BC34E6 /* PYLAppDelegate.m in Sources */,
+				AF7B58E318CCC00D00BFC810 /* PYLPuppy.m in Sources */,
 				AF48FED718CBC85B00BC34E6 /* PYLDog.m in Sources */,
 				AF48FEA718CBC4F900BC34E6 /* main.m in Sources */,
 			);
@@ -535,6 +541,7 @@
 				AF48FECB18CBC4F900BC34E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF48FECC18CBC4F900BC34E6 /* Build configuration list for PBXNativeTarget "Man's Best FriendTests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +550,7 @@
 				AF48FECE18CBC4F900BC34E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

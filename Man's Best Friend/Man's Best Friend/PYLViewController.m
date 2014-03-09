@@ -8,6 +8,7 @@
 
 #import "PYLViewController.h"
 #import "PYLDog.h"
+#import "PYLPuppy.h"
 
 @interface PYLViewController ()
 
@@ -46,6 +47,14 @@
 
     self.myDogs = [[NSMutableArray alloc] initWithObjects:myDog, secondDog, thirdDog, fourthDog, nil];
     self.displayedDog = 0;
+
+    PYLPuppy *littlePuppy = [[PYLPuppy alloc] init];
+    [littlePuppy bark];
+    littlePuppy.name = @"Bo O";
+    littlePuppy.breed = @"Portuguese Water Dog";
+    littlePuppy.image = [UIImage imageNamed:@"Bo.jpg"];
+
+    [self.myDogs addObject:littlePuppy];
 }
 
 - (void)didReceiveMemoryWarning
