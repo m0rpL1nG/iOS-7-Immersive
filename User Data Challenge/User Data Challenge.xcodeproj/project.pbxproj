@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF74F74918D61C2A007D6C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF74F74818D61C2A007D6C5D /* Foundation.framework */; };
+		AF74F74B18D61C2A007D6C5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF74F74A18D61C2A007D6C5D /* CoreGraphics.framework */; };
+		AF74F74D18D61C2A007D6C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF74F74C18D61C2A007D6C5D /* UIKit.framework */; };
+		AF74F75318D61C2A007D6C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF74F75118D61C2A007D6C5D /* InfoPlist.strings */; };
+		AF74F75518D61C2A007D6C5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF74F75418D61C2A007D6C5D /* main.m */; };
+		AF74F75918D61C2A007D6C5D /* PYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF74F75818D61C2A007D6C5D /* PYLAppDelegate.m */; };
+		AF74F75C18D61C2A007D6C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF74F75A18D61C2A007D6C5D /* Main.storyboard */; };
+		AF74F75F18D61C2A007D6C5D /* PYLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF74F75E18D61C2A007D6C5D /* PYLViewController.m */; };
+		AF74F76118D61C2A007D6C5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF74F76018D61C2A007D6C5D /* Images.xcassets */; };
+		AF74F76818D61C2A007D6C5D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF74F76718D61C2A007D6C5D /* XCTest.framework */; };
+		AF74F76918D61C2A007D6C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF74F74818D61C2A007D6C5D /* Foundation.framework */; };
+		AF74F76A18D61C2A007D6C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF74F74C18D61C2A007D6C5D /* UIKit.framework */; };
+		AF74F77218D61C2A007D6C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF74F77018D61C2A007D6C5D /* InfoPlist.strings */; };
+		AF74F77418D61C2A007D6C5D /* User_Data_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF74F77318D61C2A007D6C5D /* User_Data_ChallengeTests.m */; };
+		AF74F77F18D61C7E007D6C5D /* PYLUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = AF74F77E18D61C7E007D6C5D /* PYLUserData.m */; };
+		AF74F78418D61D8E007D6C5D /* person1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AF74F78018D61D8E007D6C5D /* person1.jpeg */; };
+		AF74F78518D61D8E007D6C5D /* person2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AF74F78118D61D8E007D6C5D /* person2.jpeg */; };
+		AF74F78618D61D8E007D6C5D /* person3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF74F78218D61D8E007D6C5D /* person3.jpg */; };
+		AF74F78718D61D8E007D6C5D /* person4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AF74F78318D61D8E007D6C5D /* person4.jpeg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF74F76B18D61C2A007D6C5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF74F73D18D61C2A007D6C5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF74F74418D61C2A007D6C5D;
+			remoteInfo = "User Data Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF74F74518D61C2A007D6C5D /* User Data Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "User Data Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF74F74818D61C2A007D6C5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF74F74A18D61C2A007D6C5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF74F74C18D61C2A007D6C5D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF74F75018D61C2A007D6C5D /* User Data Challenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "User Data Challenge-Info.plist"; sourceTree = "<group>"; };
+		AF74F75218D61C2A007D6C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF74F75418D61C2A007D6C5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF74F75618D61C2A007D6C5D /* User Data Challenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User Data Challenge-Prefix.pch"; sourceTree = "<group>"; };
+		AF74F75718D61C2A007D6C5D /* PYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYLAppDelegate.h; sourceTree = "<group>"; };
+		AF74F75818D61C2A007D6C5D /* PYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYLAppDelegate.m; sourceTree = "<group>"; };
+		AF74F75B18D61C2A007D6C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF74F75D18D61C2A007D6C5D /* PYLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYLViewController.h; sourceTree = "<group>"; };
+		AF74F75E18D61C2A007D6C5D /* PYLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYLViewController.m; sourceTree = "<group>"; };
+		AF74F76018D61C2A007D6C5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF74F76618D61C2A007D6C5D /* User Data ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "User Data ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF74F76718D61C2A007D6C5D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AF74F76F18D61C2A007D6C5D /* User Data ChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "User Data ChallengeTests-Info.plist"; sourceTree = "<group>"; };
+		AF74F77118D61C2A007D6C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF74F77318D61C2A007D6C5D /* User_Data_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User_Data_ChallengeTests.m; sourceTree = "<group>"; };
+		AF74F77D18D61C7E007D6C5D /* PYLUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLUserData.h; sourceTree = "<group>"; };
+		AF74F77E18D61C7E007D6C5D /* PYLUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLUserData.m; sourceTree = "<group>"; };
+		AF74F78018D61D8E007D6C5D /* person1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = person1.jpeg; sourceTree = "<group>"; };
+		AF74F78118D61D8E007D6C5D /* person2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = person2.jpeg; sourceTree = "<group>"; };
+		AF74F78218D61D8E007D6C5D /* person3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = person3.jpg; sourceTree = "<group>"; };
+		AF74F78318D61D8E007D6C5D /* person4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = person4.jpeg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF74F74218D61C2A007D6C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF74F74B18D61C2A007D6C5D /* CoreGraphics.framework in Frameworks */,
+				AF74F74D18D61C2A007D6C5D /* UIKit.framework in Frameworks */,
+				AF74F74918D61C2A007D6C5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF74F76318D61C2A007D6C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF74F76818D61C2A007D6C5D /* XCTest.framework in Frameworks */,
+				AF74F76A18D61C2A007D6C5D /* UIKit.framework in Frameworks */,
+				AF74F76918D61C2A007D6C5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF74F73C18D61C2A007D6C5D = {
+			isa = PBXGroup;
+			children = (
+				AF74F74E18D61C2A007D6C5D /* User Data Challenge */,
+				AF74F76D18D61C2A007D6C5D /* User Data ChallengeTests */,
+				AF74F74718D61C2A007D6C5D /* Frameworks */,
+				AF74F74618D61C2A007D6C5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF74F74618D61C2A007D6C5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF74F74518D61C2A007D6C5D /* User Data Challenge.app */,
+				AF74F76618D61C2A007D6C5D /* User Data ChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF74F74718D61C2A007D6C5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF74F74818D61C2A007D6C5D /* Foundation.framework */,
+				AF74F74A18D61C2A007D6C5D /* CoreGraphics.framework */,
+				AF74F74C18D61C2A007D6C5D /* UIKit.framework */,
+				AF74F76718D61C2A007D6C5D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF74F74E18D61C2A007D6C5D /* User Data Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				AF74F75718D61C2A007D6C5D /* PYLAppDelegate.h */,
+				AF74F75818D61C2A007D6C5D /* PYLAppDelegate.m */,
+				AF74F75A18D61C2A007D6C5D /* Main.storyboard */,
+				AF74F75D18D61C2A007D6C5D /* PYLViewController.h */,
+				AF74F75E18D61C2A007D6C5D /* PYLViewController.m */,
+				AF74F77D18D61C7E007D6C5D /* PYLUserData.h */,
+				AF74F77E18D61C7E007D6C5D /* PYLUserData.m */,
+				AF74F76018D61C2A007D6C5D /* Images.xcassets */,
+				AF74F74F18D61C2A007D6C5D /* Supporting Files */,
+			);
+			path = "User Data Challenge";
+			sourceTree = "<group>";
+		};
+		AF74F74F18D61C2A007D6C5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF74F78018D61D8E007D6C5D /* person1.jpeg */,
+				AF74F78118D61D8E007D6C5D /* person2.jpeg */,
+				AF74F78218D61D8E007D6C5D /* person3.jpg */,
+				AF74F78318D61D8E007D6C5D /* person4.jpeg */,
+				AF74F75018D61C2A007D6C5D /* User Data Challenge-Info.plist */,
+				AF74F75118D61C2A007D6C5D /* InfoPlist.strings */,
+				AF74F75418D61C2A007D6C5D /* main.m */,
+				AF74F75618D61C2A007D6C5D /* User Data Challenge-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF74F76D18D61C2A007D6C5D /* User Data ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF74F77318D61C2A007D6C5D /* User_Data_ChallengeTests.m */,
+				AF74F76E18D61C2A007D6C5D /* Supporting Files */,
+			);
+			path = "User Data ChallengeTests";
+			sourceTree = "<group>";
+		};
+		AF74F76E18D61C2A007D6C5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF74F76F18D61C2A007D6C5D /* User Data ChallengeTests-Info.plist */,
+				AF74F77018D61C2A007D6C5D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF74F74418D61C2A007D6C5D /* User Data Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF74F77718D61C2A007D6C5D /* Build configuration list for PBXNativeTarget "User Data Challenge" */;
+			buildPhases = (
+				AF74F74118D61C2A007D6C5D /* Sources */,
+				AF74F74218D61C2A007D6C5D /* Frameworks */,
+				AF74F74318D61C2A007D6C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "User Data Challenge";
+			productName = "User Data Challenge";
+			productReference = AF74F74518D61C2A007D6C5D /* User Data Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF74F76518D61C2A007D6C5D /* User Data ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF74F77A18D61C2A007D6C5D /* Build configuration list for PBXNativeTarget "User Data ChallengeTests" */;
+			buildPhases = (
+				AF74F76218D61C2A007D6C5D /* Sources */,
+				AF74F76318D61C2A007D6C5D /* Frameworks */,
+				AF74F76418D61C2A007D6C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF74F76C18D61C2A007D6C5D /* PBXTargetDependency */,
+			);
+			name = "User Data ChallengeTests";
+			productName = "User Data ChallengeTests";
+			productReference = AF74F76618D61C2A007D6C5D /* User Data ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF74F73D18D61C2A007D6C5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PYL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Pierre-Yves LEBECQ";
+				TargetAttributes = {
+					AF74F76518D61C2A007D6C5D = {
+						TestTargetID = AF74F74418D61C2A007D6C5D;
+					};
+				};
+			};
+			buildConfigurationList = AF74F74018D61C2A007D6C5D /* Build configuration list for PBXProject "User Data Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF74F73C18D61C2A007D6C5D;
+			productRefGroup = AF74F74618D61C2A007D6C5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF74F74418D61C2A007D6C5D /* User Data Challenge */,
+				AF74F76518D61C2A007D6C5D /* User Data ChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF74F74318D61C2A007D6C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF74F78618D61D8E007D6C5D /* person3.jpg in Resources */,
+				AF74F78418D61D8E007D6C5D /* person1.jpeg in Resources */,
+				AF74F76118D61C2A007D6C5D /* Images.xcassets in Resources */,
+				AF74F75318D61C2A007D6C5D /* InfoPlist.strings in Resources */,
+				AF74F78718D61D8E007D6C5D /* person4.jpeg in Resources */,
+				AF74F75C18D61C2A007D6C5D /* Main.storyboard in Resources */,
+				AF74F78518D61D8E007D6C5D /* person2.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF74F76418D61C2A007D6C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF74F77218D61C2A007D6C5D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF74F74118D61C2A007D6C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF74F75F18D61C2A007D6C5D /* PYLViewController.m in Sources */,
+				AF74F75918D61C2A007D6C5D /* PYLAppDelegate.m in Sources */,
+				AF74F77F18D61C7E007D6C5D /* PYLUserData.m in Sources */,
+				AF74F75518D61C2A007D6C5D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF74F76218D61C2A007D6C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF74F77418D61C2A007D6C5D /* User_Data_ChallengeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF74F76C18D61C2A007D6C5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF74F74418D61C2A007D6C5D /* User Data Challenge */;
+			targetProxy = AF74F76B18D61C2A007D6C5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF74F75118D61C2A007D6C5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF74F75218D61C2A007D6C5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF74F75A18D61C2A007D6C5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF74F75B18D61C2A007D6C5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF74F77018D61C2A007D6C5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF74F77118D61C2A007D6C5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF74F77518D61C2A007D6C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF74F77618D61C2A007D6C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF74F77818D61C2A007D6C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "User Data Challenge/User Data Challenge-Prefix.pch";
+				INFOPLIST_FILE = "User Data Challenge/User Data Challenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AF74F77918D61C2A007D6C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "User Data Challenge/User Data Challenge-Prefix.pch";
+				INFOPLIST_FILE = "User Data Challenge/User Data Challenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AF74F77B18D61C2A007D6C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/User Data Challenge.app/User Data Challenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "User Data Challenge/User Data Challenge-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "User Data ChallengeTests/User Data ChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AF74F77C18D61C2A007D6C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/User Data Challenge.app/User Data Challenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "User Data Challenge/User Data Challenge-Prefix.pch";
+				INFOPLIST_FILE = "User Data ChallengeTests/User Data ChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF74F74018D61C2A007D6C5D /* Build configuration list for PBXProject "User Data Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF74F77518D61C2A007D6C5D /* Debug */,
+				AF74F77618D61C2A007D6C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF74F77718D61C2A007D6C5D /* Build configuration list for PBXNativeTarget "User Data Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF74F77818D61C2A007D6C5D /* Debug */,
+				AF74F77918D61C2A007D6C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF74F77A18D61C2A007D6C5D /* Build configuration list for PBXNativeTarget "User Data ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF74F77B18D61C2A007D6C5D /* Debug */,
+				AF74F77C18D61C2A007D6C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF74F73D18D61C2A007D6C5D /* Project object */;
+}
