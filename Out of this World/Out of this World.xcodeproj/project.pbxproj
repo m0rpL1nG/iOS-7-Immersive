@@ -33,6 +33,7 @@
 		AF74F73718D61398007D6C5D /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF74F72D18D61398007D6C5D /* Uranus.jpg */; };
 		AF74F73818D61398007D6C5D /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF74F72E18D61398007D6C5D /* Venus.jpg */; };
 		AF74F73B18D613D9007D6C5D /* PYLSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AF74F73A18D613D9007D6C5D /* PYLSpaceObject.m */; };
+		AFD3D48718FA74D200AC14C2 /* PYLSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3D48618FA74D200AC14C2 /* PYLSpaceImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		AF74F72E18D61398007D6C5D /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
 		AF74F73918D613D9007D6C5D /* PYLSpaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLSpaceObject.h; sourceTree = "<group>"; };
 		AF74F73A18D613D9007D6C5D /* PYLSpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLSpaceObject.m; sourceTree = "<group>"; };
+		AFD3D48518FA74D200AC14C2 /* PYLSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLSpaceImageViewController.h; sourceTree = "<group>"; };
+		AFD3D48618FA74D200AC14C2 /* PYLSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLSpaceImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				AF74F6B518D5A8BD007D6C5D /* PYLAppDelegate.h */,
 				AF74F6B618D5A8BD007D6C5D /* PYLAppDelegate.m */,
 				AF74F6B818D5A8BD007D6C5D /* Main.storyboard */,
+				AFD3D48518FA74D200AC14C2 /* PYLSpaceImageViewController.h */,
+				AFD3D48618FA74D200AC14C2 /* PYLSpaceImageViewController.m */,
 				AF74F6DB18D5A993007D6C5D /* PYLOuterSpaceTableViewController.h */,
 				AF74F6DC18D5A993007D6C5D /* PYLOuterSpaceTableViewController.m */,
 				AF74F73918D613D9007D6C5D /* PYLSpaceObject.h */,
@@ -303,6 +308,7 @@
 				AF74F6B718D5A8BD007D6C5D /* PYLAppDelegate.m in Sources */,
 				AF74F73B18D613D9007D6C5D /* PYLSpaceObject.m in Sources */,
 				AF74F6B318D5A8BD007D6C5D /* main.m in Sources */,
+				AFD3D48718FA74D200AC14C2 /* PYLSpaceImageViewController.m in Sources */,
 				AF74F6DD18D5A993007D6C5D /* PYLOuterSpaceTableViewController.m in Sources */,
 				AF74F6E018D60464007D6C5D /* AstronomicalData.m in Sources */,
 			);
