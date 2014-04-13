@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PYLSpaceObject.h"
 
 @interface PYLSpaceImageViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) PYLSpaceObject *spaceObject;
 
 @end

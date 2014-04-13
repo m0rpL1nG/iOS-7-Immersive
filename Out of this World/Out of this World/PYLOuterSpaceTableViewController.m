@@ -9,6 +9,7 @@
 #import "PYLOuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
 #import "PYLSpaceObject.h"
+#import "PYLSpaceImageViewController.h"
 
 @interface PYLOuterSpaceTableViewController ()
 
@@ -141,5 +142,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        if ([segue.destinationViewController isKindOfClass:[PYLSpaceImageViewController class]]) {
+            PYLSpaceImageViewController *nextController = segue.destinationViewController;
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            PYLSpaceObject *selectedObject = self.planets[path.row];
+            nextController.spaceObject = selectedObject;
+        }
+    }
+}
 
 @end
