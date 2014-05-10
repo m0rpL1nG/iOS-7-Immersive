@@ -10,6 +10,7 @@
 #import "AstronomicalData.h"
 #import "PYLSpaceObject.h"
 #import "PYLSpaceImageViewController.h"
+#import "PYLSpaceDataViewController.h"
 
 @interface PYLOuterSpaceTableViewController ()
 
@@ -94,6 +95,13 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate methods
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"push to space data" sender:indexPath];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -151,6 +159,15 @@
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
             PYLSpaceObject *selectedObject = self.planets[path.row];
             nextController.spaceObject = selectedObject;
+        }
+    }
+
+    if ([sender isKindOfClass:[NSIndexPath class]]) {
+        if ([segue.destinationViewController isKindOfClass:[PYLSpaceDataViewController class]]) {
+            PYLSpaceDataViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            PYLSpaceObject *selectedObject = self.planets[path.row];
+            targetViewController.spaceObject = selectedObject;
         }
     }
 }
