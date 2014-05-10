@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PYLViewController : UIViewController
+@interface PYLViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSArray *users;
 

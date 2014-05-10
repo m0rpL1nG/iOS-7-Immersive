@@ -29,4 +29,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITableViewDataSource methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.users count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIndentifier = @"UserCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier forIndexPath:indexPath];
+
+    NSDictionary *user = self.users[indexPath.row];
+    cell.textLabel.text = user[USER_USERNAME];
+    cell.detailTextLabel.text = user[USER_EMAIL];
+    cell.imageView.image = user[USER_PROFILE_PICTURE];
+
+    return cell;
+}
+
 @end
