@@ -186,27 +186,33 @@
     [self performSegueWithIdentifier:@"push to space data" sender:indexPath];
 }
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
+    if (indexPath.section == 0) {
+        return NO;
+    }
+
     return YES;
 }
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        [self.addedSpaceObjects removeObjectAtIndex:indexPath.row];
+        NSMutableArray *newSavedSpaceObjectData = [[NSMutableArray alloc] init];
+        for (PYLSpaceObject *spaceObject in self.addedSpaceObjects) {
+            [newSavedSpaceObjectData addObject:[self spaceObjectsAsAPropertyList:spaceObject]];
+        }
+        [[NSUserDefaults standardUserDefaults] setObject:newSavedSpaceObjectData forKey:ADDED_SPACE_OBJECTS_KEY];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.
