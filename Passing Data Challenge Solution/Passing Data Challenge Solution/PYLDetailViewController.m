@@ -47,4 +47,9 @@
 }
 */
 
+- (IBAction)updateButtonPressed:(UIButton *)sender
+{
+    self.label.text = self.textField.text;
+    [self.delegate didUpdateText:self.textField.text];
+}
 @end

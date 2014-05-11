@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PYLDetailViewController.h"
 
-@interface PYLViewController : UIViewController
+@interface PYLViewController : UIViewController <PYLDetailViewControllerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 
