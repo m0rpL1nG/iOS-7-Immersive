@@ -35,6 +35,7 @@
 		AF74F73B18D613D9007D6C5D /* PYLSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AF74F73A18D613D9007D6C5D /* PYLSpaceObject.m */; };
 		AFD3D48718FA74D200AC14C2 /* PYLSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3D48618FA74D200AC14C2 /* PYLSpaceImageViewController.m */; };
 		AFD69D83191E7B25003EF0FF /* PYLSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD69D82191E7B25003EF0FF /* PYLSpaceDataViewController.m */; };
+		AFD69D86191E9A30003EF0FF /* PYLAddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD69D85191E9A30003EF0FF /* PYLAddSpaceObjectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		AFD3D48618FA74D200AC14C2 /* PYLSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLSpaceImageViewController.m; sourceTree = "<group>"; };
 		AFD69D81191E7B25003EF0FF /* PYLSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLSpaceDataViewController.h; sourceTree = "<group>"; };
 		AFD69D82191E7B25003EF0FF /* PYLSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLSpaceDataViewController.m; sourceTree = "<group>"; };
+		AFD69D84191E9A30003EF0FF /* PYLAddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLAddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		AFD69D85191E9A30003EF0FF /* PYLAddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLAddSpaceObjectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 				AF74F6B518D5A8BD007D6C5D /* PYLAppDelegate.h */,
 				AF74F6B618D5A8BD007D6C5D /* PYLAppDelegate.m */,
 				AF74F6B818D5A8BD007D6C5D /* Main.storyboard */,
+				AFD69D84191E9A30003EF0FF /* PYLAddSpaceObjectViewController.h */,
+				AFD69D85191E9A30003EF0FF /* PYLAddSpaceObjectViewController.m */,
 				AFD69D81191E7B25003EF0FF /* PYLSpaceDataViewController.h */,
 				AFD69D82191E7B25003EF0FF /* PYLSpaceDataViewController.m */,
 				AFD3D48518FA74D200AC14C2 /* PYLSpaceImageViewController.h */,
@@ -314,6 +319,7 @@
 				AF74F73B18D613D9007D6C5D /* PYLSpaceObject.m in Sources */,
 				AF74F6B318D5A8BD007D6C5D /* main.m in Sources */,
 				AFD69D83191E7B25003EF0FF /* PYLSpaceDataViewController.m in Sources */,
+				AFD69D86191E9A30003EF0FF /* PYLAddSpaceObjectViewController.m in Sources */,
 				AFD3D48718FA74D200AC14C2 /* PYLSpaceImageViewController.m in Sources */,
 				AF74F6DD18D5A993007D6C5D /* PYLOuterSpaceTableViewController.m in Sources */,
 				AF74F6E018D60464007D6C5D /* AstronomicalData.m in Sources */,

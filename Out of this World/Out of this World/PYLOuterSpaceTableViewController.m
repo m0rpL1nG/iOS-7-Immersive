@@ -18,6 +18,26 @@
 
 @implementation PYLOuterSpaceTableViewController
 
+#pragma mark - Lazy Instanciations of properties
+
+- (NSMutableArray *)planets
+{
+    if (!_planets) {
+        _planets = [[NSMutableArray alloc] init];
+    }
+
+    return _planets;
+}
+
+- (NSMutableArray *)addedSpaceObjects
+{
+    if (!_addedSpaceObjects) {
+        _addedSpaceObjects = [[NSMutableArray alloc] init];
+    }
+
+    return _addedSpaceObjects;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -36,8 +56,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-    self.planets = [[NSMutableArray alloc] init];
 
     for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets]) {
         NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
@@ -62,31 +80,57 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - PYLAddSpaceObjectViewControllerDelegate methods
+
+- (void)didCancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addSpaceObject:(PYLSpaceObject *)spaceObject
+{
+    [self.addedSpaceObjects addObject:spaceObject];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
+    if ([self.addedSpaceObjects count]) {
+        return 2;
+    }
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+    if (section == 1) {
+        return [self.addedSpaceObjects count];
+    }
+
     return [self.planets count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
 
     // Configure the cell...
-    PYLSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
-    cell.textLabel.text = planet.name;
-    cell.detailTextLabel.text = planet.nickname;
-    cell.imageView.image = planet.image;
+    if (indexPath.section == 1) {
+        PYLSpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.image;
+    } else {
+        PYLSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.image;
+    }
     
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -157,7 +201,12 @@
         if ([segue.destinationViewController isKindOfClass:[PYLSpaceImageViewController class]]) {
             PYLSpaceImageViewController *nextController = segue.destinationViewController;
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
-            PYLSpaceObject *selectedObject = self.planets[path.row];
+            PYLSpaceObject *selectedObject;
+            if (path.section == 0) {
+                selectedObject = self.planets[path.row];
+            } else if (path.section == 1) {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
             nextController.spaceObject = selectedObject;
         }
     }
@@ -166,9 +215,20 @@
         if ([segue.destinationViewController isKindOfClass:[PYLSpaceDataViewController class]]) {
             PYLSpaceDataViewController *targetViewController = segue.destinationViewController;
             NSIndexPath *path = sender;
-            PYLSpaceObject *selectedObject = self.planets[path.row];
+            PYLSpaceObject *selectedObject;
+            if (path.section == 0) {
+                selectedObject = self.planets[path.row];
+            } else if (path.section == 1) {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+
             targetViewController.spaceObject = selectedObject;
         }
+    }
+
+    if ([segue.destinationViewController isKindOfClass:[PYLAddSpaceObjectViewController class]]) {
+        PYLAddSpaceObjectViewController *addSpaceObjectViewController = segue.destinationViewController;
+        addSpaceObjectViewController.delegate = self;
     }
 }
 
