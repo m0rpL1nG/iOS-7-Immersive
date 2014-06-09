@@ -10,4 +10,6 @@
 
 @interface PYLAlbumTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *albums;
+
 @end
