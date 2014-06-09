@@ -24,6 +24,7 @@
 		AF6EF6E41946191B0093AB22 /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6E31946191B0093AB22 /* Thousand_WordsTests.m */; };
 		AF6EF6EE19461ABF0093AB22 /* Main.iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */; };
 		AF6EF6F119461BB00093AB22 /* PYLAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */; };
+		AF6EF6F419461FC00093AB22 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6F319461FC00093AB22 /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.iPhone.storyboard; sourceTree = "<group>"; };
 		AF6EF6EF19461BB00093AB22 /* PYLAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLAlbumTableViewController.h; sourceTree = "<group>"; };
 		AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLAlbumTableViewController.m; sourceTree = "<group>"; };
+		AF6EF6F219461FC00093AB22 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		AF6EF6F319461FC00093AB22 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */,
 				AF6EF6CF1946191B0093AB22 /* Images.xcassets */,
 				AF6EF6CC1946191B0093AB22 /* Thousand_Words.xcdatamodeld */,
+				AF6EF6F219461FC00093AB22 /* Album.h */,
+				AF6EF6F319461FC00093AB22 /* Album.m */,
 				AF6EF6C11946191B0093AB22 /* Supporting Files */,
 			);
 			path = "Thousand Words";
@@ -261,6 +266,7 @@
 				AF6EF6CB1946191B0093AB22 /* PYLAppDelegate.m in Sources */,
 				AF6EF6F119461BB00093AB22 /* PYLAlbumTableViewController.m in Sources */,
 				AF6EF6C71946191B0093AB22 /* main.m in Sources */,
+				AF6EF6F419461FC00093AB22 /* Album.m in Sources */,
 				AF6EF6CE1946191B0093AB22 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
