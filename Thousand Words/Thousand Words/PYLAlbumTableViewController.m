@@ -7,6 +7,7 @@
 //
 
 #import "PYLAlbumTableViewController.h"
+#import "Album.h"
 
 @interface PYLAlbumTableViewController () <UIAlertViewDelegate>
 
@@ -129,6 +130,25 @@
     UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter new album name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
     [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
     [newAlbumAlertView show];
+}
+
+#pragma mark - Helper Methods
+
+- (Album *)albumWithName:(NSString *)name
+{
+    id delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+
+    Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album" inManagedObjectContext:context];
+    album.name = name;
+    album.date = [NSDate date];
+
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"%@", error);
+    }
+
+    return album;
 }
 
 #pragma mark - Getters & Setters
