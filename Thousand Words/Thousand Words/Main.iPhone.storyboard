@@ -27,7 +27,13 @@
                             <outlet property="delegate" destination="xNS-F4-N2m" id="Qnr-50-Oqw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="o00-Lx-eaD"/>
+                    <navigationItem key="navigationItem" id="o00-Lx-eaD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="O84-CC-mKh">
+                            <connections>
+                                <action selector="addAlbumBarButtonItemPressed:" destination="xNS-F4-N2m" id="1m8-hQ-gWQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tho-tJ-CCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,7 @@
 
 #import "PYLAlbumTableViewController.h"
 
-@interface PYLAlbumTableViewController ()
+@interface PYLAlbumTableViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -111,6 +111,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Alert view delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        NSString *alertText = [alertView textFieldAtIndex:0].text;
+        NSLog(@"My new album is %@", alertText);
+    }
+}
+
+#pragma mark - Actions
+
+- (IBAction)addAlbumBarButtonItemPressed:(UIBarButtonItem *)sender
+{
+    UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter new album name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+    [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [newAlbumAlertView show];
+}
 
 #pragma mark - Getters & Setters
 
