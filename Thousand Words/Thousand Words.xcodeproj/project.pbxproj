@@ -22,6 +22,8 @@
 		AF6EF6DA1946191B0093AB22 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6EF6BE1946191B0093AB22 /* CoreData.framework */; };
 		AF6EF6E21946191B0093AB22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF6E01946191B0093AB22 /* InfoPlist.strings */; };
 		AF6EF6E41946191B0093AB22 /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6E31946191B0093AB22 /* Thousand_WordsTests.m */; };
+		AF6EF6EE19461ABF0093AB22 /* Main.iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */; };
+		AF6EF6F119461BB00093AB22 /* PYLAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		AF6EF6DF1946191B0093AB22 /* Thousand WordsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Thousand WordsTests-Info.plist"; sourceTree = "<group>"; };
 		AF6EF6E11946191B0093AB22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF6EF6E31946191B0093AB22 /* Thousand_WordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousand_WordsTests.m; sourceTree = "<group>"; };
+		AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.iPhone.storyboard; sourceTree = "<group>"; };
+		AF6EF6EF19461BB00093AB22 /* PYLAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLAlbumTableViewController.h; sourceTree = "<group>"; };
+		AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLAlbumTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 			children = (
 				AF6EF6C91946191B0093AB22 /* PYLAppDelegate.h */,
 				AF6EF6CA1946191B0093AB22 /* PYLAppDelegate.m */,
+				AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */,
+				AF6EF6EF19461BB00093AB22 /* PYLAlbumTableViewController.h */,
+				AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */,
 				AF6EF6CF1946191B0093AB22 /* Images.xcassets */,
 				AF6EF6CC1946191B0093AB22 /* Thousand_Words.xcdatamodeld */,
 				AF6EF6C11946191B0093AB22 /* Supporting Files */,
@@ -229,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6EF6EE19461ABF0093AB22 /* Main.iPhone.storyboard in Resources */,
 				AF6EF6C51946191B0093AB22 /* InfoPlist.strings in Resources */,
 				AF6EF6D01946191B0093AB22 /* Images.xcassets in Resources */,
 			);
@@ -250,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6EF6CB1946191B0093AB22 /* PYLAppDelegate.m in Sources */,
+				AF6EF6F119461BB00093AB22 /* PYLAlbumTableViewController.m in Sources */,
 				AF6EF6C71946191B0093AB22 /* main.m in Sources */,
 				AF6EF6CE1946191B0093AB22 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
@@ -371,6 +381,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Thousand Words/Thousand Words-Prefix.pch";
 				INFOPLIST_FILE = "Thousand Words/Thousand Words-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -384,6 +395,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Thousand Words/Thousand Words-Prefix.pch";
 				INFOPLIST_FILE = "Thousand Words/Thousand Words-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
