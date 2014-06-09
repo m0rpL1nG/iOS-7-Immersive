@@ -13,7 +13,7 @@
 		AF6EF6311945F3F50093AB22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF62F1945F3F50093AB22 /* InfoPlist.strings */; };
 		AF6EF6331945F3F50093AB22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6321945F3F50093AB22 /* main.m */; };
 		AF6EF6371945F3F50093AB22 /* PYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6361945F3F50093AB22 /* PYLAppDelegate.m */; };
-		AF6EF63A1945F3F50093AB22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF6381945F3F50093AB22 /* Main.storyboard */; };
+		AF6EF63A1945F3F50093AB22 /* Main.iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF6381945F3F50093AB22 /* Main.iPhone.storyboard */; };
 		AF6EF63D1945F3F50093AB22 /* PYLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF63C1945F3F50093AB22 /* PYLViewController.m */; };
 		AF6EF63F1945F3F50093AB22 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF63E1945F3F50093AB22 /* Images.xcassets */; };
 		AF6EF6461945F3F50093AB22 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6EF6451945F3F50093AB22 /* XCTest.framework */; };
@@ -22,6 +22,10 @@
 		AF6EF6501945F3F50093AB22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF64E1945F3F50093AB22 /* InfoPlist.strings */; };
 		AF6EF6521945F3F50093AB22 /* Race_to_the_TopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6511945F3F50093AB22 /* Race_to_the_TopTests.m */; };
 		AF6EF65D1945F48D0093AB22 /* PYLSpaceShipView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF65C1945F48D0093AB22 /* PYLSpaceShipView.m */; };
+		AF6EF6A31945FF570093AB22 /* Main.iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF6A21945FF570093AB22 /* Main.iPad.storyboard */; };
+		AF6EF6A5194601D10093AB22 /* mount-fuji-and-mount-hoei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF6A4194601D10093AB22 /* mount-fuji-and-mount-hoei.jpg */; };
+		AF6EF6A8194602BD0093AB22 /* PYLMountainPath.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6A7194602BD0093AB22 /* PYLMountainPath.m */; };
+		AF6EF6AB194604730093AB22 /* PYLPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6AA194604730093AB22 /* PYLPathView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +49,7 @@
 		AF6EF6341945F3F50093AB22 /* Race to the Top-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Race to the Top-Prefix.pch"; sourceTree = "<group>"; };
 		AF6EF6351945F3F50093AB22 /* PYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYLAppDelegate.h; sourceTree = "<group>"; };
 		AF6EF6361945F3F50093AB22 /* PYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYLAppDelegate.m; sourceTree = "<group>"; };
-		AF6EF6391945F3F50093AB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF6EF6391945F3F50093AB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.iPhone.storyboard; sourceTree = "<group>"; };
 		AF6EF63B1945F3F50093AB22 /* PYLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYLViewController.h; sourceTree = "<group>"; };
 		AF6EF63C1945F3F50093AB22 /* PYLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYLViewController.m; sourceTree = "<group>"; };
 		AF6EF63E1945F3F50093AB22 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -56,6 +60,12 @@
 		AF6EF6511945F3F50093AB22 /* Race_to_the_TopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Race_to_the_TopTests.m; sourceTree = "<group>"; };
 		AF6EF65B1945F48D0093AB22 /* PYLSpaceShipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLSpaceShipView.h; sourceTree = "<group>"; };
 		AF6EF65C1945F48D0093AB22 /* PYLSpaceShipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLSpaceShipView.m; sourceTree = "<group>"; };
+		AF6EF6A21945FF570093AB22 /* Main.iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.iPad.storyboard; sourceTree = "<group>"; };
+		AF6EF6A4194601D10093AB22 /* mount-fuji-and-mount-hoei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mount-fuji-and-mount-hoei.jpg"; sourceTree = "<group>"; };
+		AF6EF6A6194602BD0093AB22 /* PYLMountainPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLMountainPath.h; sourceTree = "<group>"; };
+		AF6EF6A7194602BD0093AB22 /* PYLMountainPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLMountainPath.m; sourceTree = "<group>"; };
+		AF6EF6A9194604730093AB22 /* PYLPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLPathView.h; sourceTree = "<group>"; };
+		AF6EF6AA194604730093AB22 /* PYLPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLPathView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +127,14 @@
 			children = (
 				AF6EF6351945F3F50093AB22 /* PYLAppDelegate.h */,
 				AF6EF6361945F3F50093AB22 /* PYLAppDelegate.m */,
-				AF6EF6381945F3F50093AB22 /* Main.storyboard */,
+				AF6EF6381945F3F50093AB22 /* Main.iPhone.storyboard */,
+				AF6EF6A21945FF570093AB22 /* Main.iPad.storyboard */,
 				AF6EF65B1945F48D0093AB22 /* PYLSpaceShipView.h */,
 				AF6EF65C1945F48D0093AB22 /* PYLSpaceShipView.m */,
+				AF6EF6A6194602BD0093AB22 /* PYLMountainPath.h */,
+				AF6EF6A7194602BD0093AB22 /* PYLMountainPath.m */,
+				AF6EF6A9194604730093AB22 /* PYLPathView.h */,
+				AF6EF6AA194604730093AB22 /* PYLPathView.m */,
 				AF6EF63B1945F3F50093AB22 /* PYLViewController.h */,
 				AF6EF63C1945F3F50093AB22 /* PYLViewController.m */,
 				AF6EF63E1945F3F50093AB22 /* Images.xcassets */,
@@ -131,6 +146,7 @@
 		AF6EF62D1945F3F50093AB22 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF6EF6A4194601D10093AB22 /* mount-fuji-and-mount-hoei.jpg */,
 				AF6EF62E1945F3F50093AB22 /* Race to the Top-Info.plist */,
 				AF6EF62F1945F3F50093AB22 /* InfoPlist.strings */,
 				AF6EF6321945F3F50093AB22 /* main.m */,
@@ -234,9 +250,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6EF6A5194601D10093AB22 /* mount-fuji-and-mount-hoei.jpg in Resources */,
+				AF6EF6A31945FF570093AB22 /* Main.iPad.storyboard in Resources */,
 				AF6EF63F1945F3F50093AB22 /* Images.xcassets in Resources */,
 				AF6EF6311945F3F50093AB22 /* InfoPlist.strings in Resources */,
-				AF6EF63A1945F3F50093AB22 /* Main.storyboard in Resources */,
+				AF6EF63A1945F3F50093AB22 /* Main.iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6EF63D1945F3F50093AB22 /* PYLViewController.m in Sources */,
+				AF6EF6AB194604730093AB22 /* PYLPathView.m in Sources */,
 				AF6EF65D1945F48D0093AB22 /* PYLSpaceShipView.m in Sources */,
 				AF6EF6371945F3F50093AB22 /* PYLAppDelegate.m in Sources */,
+				AF6EF6A8194602BD0093AB22 /* PYLMountainPath.m in Sources */,
 				AF6EF6331945F3F50093AB22 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +309,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		AF6EF6381945F3F50093AB22 /* Main.storyboard */ = {
+		AF6EF6381945F3F50093AB22 /* Main.iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AF6EF6391945F3F50093AB22 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main.iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		AF6EF64E1945F3F50093AB22 /* InfoPlist.strings */ = {
@@ -386,7 +406,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Race to the Top/Race to the Top-Prefix.pch";
 				INFOPLIST_FILE = "Race to the Top/Race to the Top-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,7 +421,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Race to the Top/Race to the Top-Prefix.pch";
 				INFOPLIST_FILE = "Race to the Top/Race to the Top-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
