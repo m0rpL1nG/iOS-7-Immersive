@@ -53,16 +53,16 @@
     return [self.albums count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Album *album = [self.albums objectAtIndex:indexPath.row];
+    cell.textLabel.text = album.name;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -118,8 +118,8 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-        NSString *alertText = [alertView textFieldAtIndex:0].text;
-        NSLog(@"My new album is %@", alertText);
+        [self.albums addObject:[self albumWithName:[alertView textFieldAtIndex:0].text]];
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:([self.albums count] - 1) inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
