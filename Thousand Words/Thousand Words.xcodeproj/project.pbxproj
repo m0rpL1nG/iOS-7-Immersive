@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF2E4E411956D8D600C17E8D /* PYLPictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E4E401956D8D600C17E8D /* PYLPictureDataTransformer.m */; };
 		AF2E4E441956E35600C17E8D /* PYLPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E4E431956E35600C17E8D /* PYLPhotoDetailViewController.m */; };
+		AF2E4E471956FADF00C17E8D /* PYLFiltersCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E4E461956FADF00C17E8D /* PYLFiltersCollectionViewController.m */; };
 		AF4303351956255000EF61B7 /* PYLCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4303341956255000EF61B7 /* PYLCoreDataHelper.m */; };
 		AF4303381956292500EF61B7 /* PYLPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4303371956292500EF61B7 /* PYLPhotosCollectionViewController.m */; };
 		AF43033B19562D6D00EF61B7 /* PYLPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF43033A19562D6D00EF61B7 /* PYLPhotoCollectionViewCell.m */; };
@@ -49,6 +50,8 @@
 		AF2E4E401956D8D600C17E8D /* PYLPictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLPictureDataTransformer.m; sourceTree = "<group>"; };
 		AF2E4E421956E35600C17E8D /* PYLPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLPhotoDetailViewController.h; sourceTree = "<group>"; };
 		AF2E4E431956E35600C17E8D /* PYLPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLPhotoDetailViewController.m; sourceTree = "<group>"; };
+		AF2E4E451956FADF00C17E8D /* PYLFiltersCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLFiltersCollectionViewController.h; sourceTree = "<group>"; };
+		AF2E4E461956FADF00C17E8D /* PYLFiltersCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLFiltersCollectionViewController.m; sourceTree = "<group>"; };
 		AF4303331956255000EF61B7 /* PYLCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLCoreDataHelper.h; sourceTree = "<group>"; };
 		AF4303341956255000EF61B7 /* PYLCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLCoreDataHelper.m; sourceTree = "<group>"; };
 		AF4303361956292500EF61B7 /* PYLPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLPhotosCollectionViewController.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				AF6EF6C91946191B0093AB22 /* PYLAppDelegate.h */,
 				AF6EF6CA1946191B0093AB22 /* PYLAppDelegate.m */,
 				AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */,
+				AF2E4E451956FADF00C17E8D /* PYLFiltersCollectionViewController.h */,
+				AF2E4E461956FADF00C17E8D /* PYLFiltersCollectionViewController.m */,
 				AF2E4E421956E35600C17E8D /* PYLPhotoDetailViewController.h */,
 				AF2E4E431956E35600C17E8D /* PYLPhotoDetailViewController.m */,
 				AF43033919562D6D00EF61B7 /* PYLPhotoCollectionViewCell.h */,
@@ -305,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2E4E471956FADF00C17E8D /* PYLFiltersCollectionViewController.m in Sources */,
 				AF2E4E441956E35600C17E8D /* PYLPhotoDetailViewController.m in Sources */,
 				AF6EF6CB1946191B0093AB22 /* PYLAppDelegate.m in Sources */,
 				AF6EF6F119461BB00093AB22 /* PYLAlbumTableViewController.m in Sources */,

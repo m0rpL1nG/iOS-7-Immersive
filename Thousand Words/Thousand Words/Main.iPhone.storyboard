@@ -110,6 +110,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addFilterButtonPressed:" destination="ZjX-ek-Drf" eventType="touchUpInside" id="unb-hX-2Qw"/>
+                                    <segue destination="9Me-pR-H7O" kind="push" identifier="Filter Segue" id="gtn-Rf-oQh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhR-4E-zDB">
@@ -133,6 +134,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxQ-2O-iJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1841" y="80"/>
+        </scene>
+        <!--Filters Collection View Controller-->
+        <scene sceneID="5bB-co-QeV">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="9Me-pR-H7O" customClass="PYLFiltersCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="W14-ps-ede">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kRn-6e-MWv">
+                            <size key="itemSize" width="155" height="155"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Photo Cell" id="tzA-sq-BjF" customClass="PYLPhotoCollectionViewCell">
+                                <rect key="frame" x="0.0" y="64" width="155" height="155"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="9Me-pR-H7O" id="Wyt-Wh-mxE"/>
+                            <outlet property="delegate" destination="9Me-pR-H7O" id="1fn-EC-bAb"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Vll-U7-6PR"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlp-tB-npM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2379" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="roS-4U-vsS">

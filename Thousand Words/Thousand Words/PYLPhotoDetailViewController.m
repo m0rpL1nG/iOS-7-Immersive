@@ -8,6 +8,7 @@
 
 #import "PYLPhotoDetailViewController.h"
 #import "Photo.h"
+#import "PYLFiltersCollectionViewController.h"
 
 @interface PYLPhotoDetailViewController ()
 
@@ -43,16 +44,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Filter Segue"]) {
+        if ([segue.destinationViewController isKindOfClass:[PYLFiltersCollectionViewController class]]) {
+            PYLFiltersCollectionViewController *targetViewController = segue.destinationViewController;
+            targetViewController.photo = self.photo;
+        }
+    }
 }
-*/
 
 - (IBAction)addFilterButtonPressed:(UIButton *)sender
 {
