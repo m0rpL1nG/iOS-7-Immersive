@@ -8,6 +8,8 @@
 
 #import "PYLAlbumTableViewController.h"
 #import "Album.h"
+#import "PYLCoreDataHelper.h"
+#import "PYLPhotosCollectionViewController.h"
 
 @interface PYLAlbumTableViewController () <UIAlertViewDelegate>
 
@@ -27,12 +29,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Album"];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
+
+    NSError *error = nil;
+
+    NSArray *fetchedAlbums = [[PYLCoreDataHelper managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    self.albums = [fetchedAlbums mutableCopy];
+
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,10 +74,10 @@
 {
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
+
     Album *album = [self.albums objectAtIndex:indexPath.row];
     cell.textLabel.text = album.name;
-    
+
     return cell;
 }
 
@@ -82,7 +99,7 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 */
 
@@ -102,7 +119,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -110,8 +126,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Album Chosen"]) {
+        if ([segue.destinationViewController isKindOfClass:[PYLPhotosCollectionViewController class]]) {
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            PYLPhotosCollectionViewController *photosCollectionViewController = segue.destinationViewController;
+            photosCollectionViewController.album = self.albums[indexPath.row];
+        }
+    }
 }
-*/
 
 #pragma mark - Alert view delegate
 
@@ -136,8 +158,7 @@
 
 - (Album *)albumWithName:(NSString *)name
 {
-    id delegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [delegate managedObjectContext];
+    NSManagedObjectContext *context = [PYLCoreDataHelper managedObjectContext];
 
     Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album" inManagedObjectContext:context];
     album.name = name;

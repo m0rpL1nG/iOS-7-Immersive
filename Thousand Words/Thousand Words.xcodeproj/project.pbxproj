@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2E4E411956D8D600C17E8D /* PYLPictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E4E401956D8D600C17E8D /* PYLPictureDataTransformer.m */; };
+		AF4303351956255000EF61B7 /* PYLCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4303341956255000EF61B7 /* PYLCoreDataHelper.m */; };
+		AF4303381956292500EF61B7 /* PYLPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4303371956292500EF61B7 /* PYLPhotosCollectionViewController.m */; };
+		AF43033B19562D6D00EF61B7 /* PYLPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF43033A19562D6D00EF61B7 /* PYLPhotoCollectionViewCell.m */; };
+		AF43033D19562F6D00EF61B7 /* astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF43033C19562F6D00EF61B7 /* astronaut.jpg */; };
+		AF430340195637A100EF61B7 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF43033F195637A100EF61B7 /* Photo.m */; };
+		AF430343195637A100EF61B7 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = AF430342195637A100EF61B7 /* Album.m */; };
 		AF6EF6B91946191B0093AB22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6EF6B81946191B0093AB22 /* Foundation.framework */; };
 		AF6EF6BB1946191B0093AB22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6EF6BA1946191B0093AB22 /* CoreGraphics.framework */; };
 		AF6EF6BD1946191B0093AB22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6EF6BC1946191B0093AB22 /* UIKit.framework */; };
@@ -24,7 +31,6 @@
 		AF6EF6E41946191B0093AB22 /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6E31946191B0093AB22 /* Thousand_WordsTests.m */; };
 		AF6EF6EE19461ABF0093AB22 /* Main.iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */; };
 		AF6EF6F119461BB00093AB22 /* PYLAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */; };
-		AF6EF6F419461FC00093AB22 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF6F319461FC00093AB22 /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF2E4E3F1956D8D600C17E8D /* PYLPictureDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLPictureDataTransformer.h; sourceTree = "<group>"; };
+		AF2E4E401956D8D600C17E8D /* PYLPictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLPictureDataTransformer.m; sourceTree = "<group>"; };
+		AF4303331956255000EF61B7 /* PYLCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLCoreDataHelper.h; sourceTree = "<group>"; };
+		AF4303341956255000EF61B7 /* PYLCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLCoreDataHelper.m; sourceTree = "<group>"; };
+		AF4303361956292500EF61B7 /* PYLPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLPhotosCollectionViewController.h; sourceTree = "<group>"; };
+		AF4303371956292500EF61B7 /* PYLPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLPhotosCollectionViewController.m; sourceTree = "<group>"; };
+		AF43033919562D6D00EF61B7 /* PYLPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		AF43033A19562D6D00EF61B7 /* PYLPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		AF43033C19562F6D00EF61B7 /* astronaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronaut.jpg; sourceTree = "<group>"; };
+		AF43033E195637A100EF61B7 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		AF43033F195637A100EF61B7 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		AF430341195637A100EF61B7 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		AF430342195637A100EF61B7 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		AF6EF6B51946191B0093AB22 /* Thousand Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thousand Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6EF6B81946191B0093AB22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF6EF6BA1946191B0093AB22 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,8 +78,6 @@
 		AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.iPhone.storyboard; sourceTree = "<group>"; };
 		AF6EF6EF19461BB00093AB22 /* PYLAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLAlbumTableViewController.h; sourceTree = "<group>"; };
 		AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLAlbumTableViewController.m; sourceTree = "<group>"; };
-		AF6EF6F219461FC00093AB22 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
-		AF6EF6F319461FC00093AB22 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +106,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF430345195637DE00EF61B7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AF6EF6CC1946191B0093AB22 /* Thousand_Words.xcdatamodeld */,
+				AF430341195637A100EF61B7 /* Album.h */,
+				AF430342195637A100EF61B7 /* Album.m */,
+				AF43033E195637A100EF61B7 /* Photo.h */,
+				AF43033F195637A100EF61B7 /* Photo.m */,
+				AF2E4E3F1956D8D600C17E8D /* PYLPictureDataTransformer.h */,
+				AF2E4E401956D8D600C17E8D /* PYLPictureDataTransformer.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		AF6EF6AC1946191B0093AB22 = {
 			isa = PBXGroup;
 			children = (
@@ -126,12 +157,16 @@
 				AF6EF6C91946191B0093AB22 /* PYLAppDelegate.h */,
 				AF6EF6CA1946191B0093AB22 /* PYLAppDelegate.m */,
 				AF6EF6ED19461ABF0093AB22 /* Main.iPhone.storyboard */,
+				AF43033919562D6D00EF61B7 /* PYLPhotoCollectionViewCell.h */,
+				AF43033A19562D6D00EF61B7 /* PYLPhotoCollectionViewCell.m */,
+				AF4303361956292500EF61B7 /* PYLPhotosCollectionViewController.h */,
+				AF4303371956292500EF61B7 /* PYLPhotosCollectionViewController.m */,
 				AF6EF6EF19461BB00093AB22 /* PYLAlbumTableViewController.h */,
 				AF6EF6F019461BB00093AB22 /* PYLAlbumTableViewController.m */,
+				AF4303331956255000EF61B7 /* PYLCoreDataHelper.h */,
+				AF4303341956255000EF61B7 /* PYLCoreDataHelper.m */,
 				AF6EF6CF1946191B0093AB22 /* Images.xcassets */,
-				AF6EF6CC1946191B0093AB22 /* Thousand_Words.xcdatamodeld */,
-				AF6EF6F219461FC00093AB22 /* Album.h */,
-				AF6EF6F319461FC00093AB22 /* Album.m */,
+				AF430345195637DE00EF61B7 /* CoreData */,
 				AF6EF6C11946191B0093AB22 /* Supporting Files */,
 			);
 			path = "Thousand Words";
@@ -140,6 +175,7 @@
 		AF6EF6C11946191B0093AB22 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF43033C19562F6D00EF61B7 /* astronaut.jpg */,
 				AF6EF6C21946191B0093AB22 /* Thousand Words-Info.plist */,
 				AF6EF6C31946191B0093AB22 /* InfoPlist.strings */,
 				AF6EF6C61946191B0093AB22 /* main.m */,
@@ -243,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6EF6EE19461ABF0093AB22 /* Main.iPhone.storyboard in Resources */,
+				AF43033D19562F6D00EF61B7 /* astronaut.jpg in Resources */,
 				AF6EF6C51946191B0093AB22 /* InfoPlist.strings in Resources */,
 				AF6EF6D01946191B0093AB22 /* Images.xcassets in Resources */,
 			);
@@ -266,7 +303,12 @@
 				AF6EF6CB1946191B0093AB22 /* PYLAppDelegate.m in Sources */,
 				AF6EF6F119461BB00093AB22 /* PYLAlbumTableViewController.m in Sources */,
 				AF6EF6C71946191B0093AB22 /* main.m in Sources */,
-				AF6EF6F419461FC00093AB22 /* Album.m in Sources */,
+				AF430340195637A100EF61B7 /* Photo.m in Sources */,
+				AF2E4E411956D8D600C17E8D /* PYLPictureDataTransformer.m in Sources */,
+				AF4303381956292500EF61B7 /* PYLPhotosCollectionViewController.m in Sources */,
+				AF43033B19562D6D00EF61B7 /* PYLPhotoCollectionViewCell.m in Sources */,
+				AF430343195637A100EF61B7 /* Album.m in Sources */,
+				AF4303351956255000EF61B7 /* PYLCoreDataHelper.m in Sources */,
 				AF6EF6CE1946191B0093AB22 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +508,7 @@
 				AF6EF6E91946191B0093AB22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF6EF6EA1946191B0093AB22 /* Build configuration list for PBXNativeTarget "Thousand WordsTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +517,7 @@
 				AF6EF6EC1946191B0093AB22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
