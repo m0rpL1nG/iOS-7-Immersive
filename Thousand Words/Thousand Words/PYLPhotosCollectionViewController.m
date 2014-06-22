@@ -11,6 +11,7 @@
 #import "Photo.h"
 #import "PYLPictureDataTransformer.h"
 #import "PYLCoreDataHelper.h"
+#import "PYLPhotoDetailViewController.h"
 
 @interface PYLPhotosCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -42,10 +43,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
     NSSet *unorderedPhotos = self.album.photos;
     NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
     NSArray *sortedPhotos = [unorderedPhotos sortedArrayUsingDescriptors:@[dateDescriptor]];
     self.photos = [sortedPhotos mutableCopy];
+
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,16 +102,21 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Detail Segue"]) {
+        if ([segue.destinationViewController isKindOfClass:[PYLPhotoDetailViewController class]]) {
+            PYLPhotoDetailViewController *photoDetailViewController = segue.destinationViewController;
+            NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
+
+            Photo *selectedPhoto = self.photos[indexPath.row];
+            photoDetailViewController.photo = selectedPhoto;
+        }
+    }
 }
-*/
 
 #pragma mark - Actions
 
