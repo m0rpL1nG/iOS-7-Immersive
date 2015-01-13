@@ -144,4 +144,4 @@ Thousand Words
 
 Photo albums management.
 
-Topics covered: Storyboards, IBOutlets, IBActions, UITableView, Segues, Protocols, UICollectionView, CoreGraphics, Filters, UIImagePickerController
+Topics covered: Storyboards, IBOutlets, IBActions, UITableView, Segues, Protocols, UICollectionView, CoreGraphics, Filters, UIImagePickerController, Multi Threading, Grand Central Dispatch.

@@ -99,7 +99,14 @@
 
     PYLPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageview.image = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+
+    dispatch_queue_t filterQueue = dispatch_queue_create("filter queue", NULL);
+    dispatch_async(filterQueue, ^{
+        UIImage *filteredImage = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.imageview.image = filteredImage;
+        });
+    });
 
     return cell;
 }
