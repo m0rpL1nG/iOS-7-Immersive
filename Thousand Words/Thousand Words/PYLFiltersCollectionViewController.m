@@ -124,12 +124,14 @@
 
     self.photo.image = selectedCell.imageview.image;
 
-    NSError *error = nil;
-    if (![[self.photo managedObjectContext] save:&error]) {
-        NSLog(@"%@", error);
-    }
+    if (self.photo.image) {
+        NSError *error = nil;
+        if (![[self.photo managedObjectContext] save:&error]) {
+            NSLog(@"%@", error);
+        }
 
-    [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 /*
