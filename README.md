@@ -145,3 +145,11 @@ Thousand Words
 Photo albums management.
 
 Topics covered: Storyboards, IBOutlets, IBActions, UITableView, Segues, Protocols, UICollectionView, CoreGraphics, Filters, UIImagePickerController, Multi Threading, Grand Central Dispatch.
+
+
+Parse Test
+----------
+
+Parse testing application.
+
+Topics covered: Storyboards, IBOutlets, IBActions, UITableView, Segues, Parse.
