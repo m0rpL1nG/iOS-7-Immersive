@@ -7,11 +7,14 @@
 //
 
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "Constants.h"
 
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) NSMutableData *imageData;
 
 @end
 
@@ -72,30 +75,59 @@
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             NSDictionary *userDictionary = (NSDictionary *)result;
+
+            NSString *facebookId = userDictionary[@"id"];
+            NSURL *pictureUrl = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large@return_ssl_resources=1", facebookId]];
+
             NSMutableDictionary *userProfile = [[NSMutableDictionary alloc] initWithCapacity:8];
             if (userDictionary[@"name"]) {
-                userProfile[@"name"] = userDictionary[@"name"];
+                userProfile[kUserProfileNameKey] = userDictionary[@"name"];
             }
             if (userDictionary[@"first_name"]) {
-                userProfile[@"first_name"] = userDictionary[@"first_name"];
+                userProfile[kUserProfileFirstNameKey] = userDictionary[@"first_name"];
             }
             if (userDictionary[@"location"][@"name"]) {
-                userProfile[@"location"] = userDictionary[@"location"][@"name"];
+                userProfile[kUserProfileLocationKey] = userDictionary[@"location"][@"name"];
             }
             if (userDictionary[@"gender"]) {
-                userProfile[@"gender"] = userDictionary[@"gender"];
+                userProfile[kUserProfileGenderKey] = userDictionary[@"gender"];
             }
             if (userDictionary[@"birthday"]) {
-                userProfile[@"birthday"] = userDictionary[@"birthday"];
+                userProfile[kUserProfileBirthdayKey] = userDictionary[@"birthday"];
             }
             if (userDictionary[@"interested_in"]) {
-                userProfile[@"interested_in"] = userDictionary[@"interested_in"];
+                userProfile[kUserProfileInterestedInKey] = userDictionary[@"interested_in"];
+            }
+            if ([pictureUrl absoluteString]) {
+                userProfile[kUserProfilePictureURLKey] = [pictureUrl absoluteString];
             }
 
-            [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
+            [[PFUser currentUser] setObject:userProfile forKey:kUserProfileKey];
             [[PFUser currentUser] saveInBackground];
         } else {
             NSLog(@"Error in FBRequest : %@", error);
+        }
+    }];
+}
+
+- (void)uploadPFFileToParse:(UIImage *)image
+{
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.8);
+
+    if (!imageData) {
+        NSLog(@"imageData was not found.");
+        return;
+    }
+
+    PFFile *photoFile = [PFFile fileWithData:imageData];
+    [photoFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            PFObject *photo = [PFObject objectWithClassName:kPhotoClassKey];
+            [photo setObject:[PFUser currentUser] forKey:kPhotoUserKey];
+            [photo setObject:photoFile forKey:kPhotoPictureKey];
+            [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                NSLog(@"Photo saved successfuly");
+            }];
         }
     }];
 }
