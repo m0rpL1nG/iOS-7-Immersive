@@ -11,6 +11,8 @@
 		6703A8D01A6E6D8E00456EAE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8CF1A6E6D8E00456EAE /* SettingsViewController.m */; };
 		6703A8D41A6E6FF200456EAE /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8D31A6E6FF200456EAE /* EditProfileViewController.m */; };
 		6703A8D81A6E71F100456EAE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8D71A6E71F100456EAE /* ProfileViewController.m */; };
+		6703A8DB1A6EBF4200456EAE /* TestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8DA1A6EBF4200456EAE /* TestUser.m */; };
+		6703A8DD1A6EC13300456EAE /* ProfileImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6703A8DC1A6EC13200456EAE /* ProfileImage1.jpg */; };
 		67827E3E1A67F30900E3CB07 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 67827E3D1A67F30900E3CB07 /* Constants.m */; };
 		67ED2C291A66BF1200D61305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C281A66BF1200D61305 /* main.m */; };
 		67ED2C2C1A66BF1200D61305 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C2B1A66BF1200D61305 /* AppDelegate.m */; };
@@ -43,6 +45,9 @@
 		6703A8D31A6E6FF200456EAE /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		6703A8D61A6E71F100456EAE /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		6703A8D71A6E71F100456EAE /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		6703A8D91A6EBF4200456EAE /* TestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUser.h; sourceTree = "<group>"; };
+		6703A8DA1A6EBF4200456EAE /* TestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUser.m; sourceTree = "<group>"; };
+		6703A8DC1A6EC13200456EAE /* ProfileImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProfileImage1.jpg; sourceTree = "<group>"; };
 		67827E3C1A67F30900E3CB07 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		67827E3D1A67F30900E3CB07 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		67ED2C231A66BF1200D61305 /* MatchedUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchedUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +151,8 @@
 				67ED2C361A66BF1200D61305 /* Images.xcassets */,
 				67ED2C381A66BF1200D61305 /* LaunchScreen.xib */,
 				67ED2C261A66BF1200D61305 /* Supporting Files */,
+				6703A8D91A6EBF4200456EAE /* TestUser.h */,
+				6703A8DA1A6EBF4200456EAE /* TestUser.m */,
 			);
 			path = MatchedUp;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 		67ED2C261A66BF1200D61305 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6703A8DC1A6EC13200456EAE /* ProfileImage1.jpg */,
 				67ED2C271A66BF1200D61305 /* Info.plist */,
 				67ED2C281A66BF1200D61305 /* main.m */,
 				67827E3C1A67F30900E3CB07 /* Constants.h */,
@@ -299,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67ED2C351A66BF1200D61305 /* Main.storyboard in Resources */,
+				6703A8DD1A6EC13300456EAE /* ProfileImage1.jpg in Resources */,
 				67ED2C3A1A66BF1200D61305 /* LaunchScreen.xib in Resources */,
 				67ED2C371A66BF1200D61305 /* Images.xcassets in Resources */,
 			);
@@ -355,6 +364,7 @@
 				67ED2C291A66BF1200D61305 /* main.m in Sources */,
 				6703A8D81A6E71F100456EAE /* ProfileViewController.m in Sources */,
 				6703A8D41A6E6FF200456EAE /* EditProfileViewController.m in Sources */,
+				6703A8DB1A6EBF4200456EAE /* TestUser.m in Sources */,
 				67ED2C511A66CB0B00D61305 /* LoginViewController.m in Sources */,
 				6703A8D01A6E6D8E00456EAE /* SettingsViewController.m in Sources */,
 				6703A8CC1A6E65E900456EAE /* HomeViewController.m in Sources */,

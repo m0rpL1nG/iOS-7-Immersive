@@ -39,9 +39,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     self.currentPhotoIndex = 0;
 
     PFQuery *query = [PFQuery queryWithClassName:kPhotoClassKey];
+    [query whereKey:kPhotoUserKey notEqualTo:[PFUser currentUser]];
     [query includeKey:kPhotoUserKey];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
