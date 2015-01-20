@@ -30,7 +30,7 @@
 {
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self updateUserInformation];
-        [self performSegueWithIdentifier:@"loginToTabBarSegue" sender:self];
+        [self performSegueWithIdentifier:@"loginToHomeSegue" sender:self];
     }
 }
 
@@ -72,7 +72,7 @@
         }
 
         [self updateUserInformation];
-        [self performSegueWithIdentifier:@"loginToTabBarSegue" sender:self];
+        [self performSegueWithIdentifier:@"loginToHomeSegue" sender:self];
     }];
 }
 
@@ -104,9 +104,19 @@
             }
             if (userDictionary[@"birthday"]) {
                 userProfile[kUserProfileBirthdayKey] = userDictionary[@"birthday"];
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateStyle:NSDateFormatterShortStyle];
+                NSDate *date = [formatter dateFromString:userDictionary[@"birthday"]];
+                NSDate *now = [NSDate date];
+                NSTimeInterval seconds = [now timeIntervalSinceDate:date];
+                int age = seconds / (60 * 60 * 24 * 365);
+                userProfile[kUserProfileAgeKey] = @(age);
             }
             if (userDictionary[@"interested_in"]) {
                 userProfile[kUserProfileInterestedInKey] = userDictionary[@"interested_in"];
+            }
+            if (userDictionary[@"relationship_status"]) {
+                userProfile[kUserProfileRelationshipStatusKey] = userDictionary[@"relationship_status"];
             }
             if ([pictureUrl absoluteString]) {
                 userProfile[kUserProfilePictureURLKey] = [pictureUrl absoluteString];
