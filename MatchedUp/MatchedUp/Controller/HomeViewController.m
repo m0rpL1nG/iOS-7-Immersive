@@ -23,7 +23,12 @@
 
 @property (strong, nonatomic) NSArray *photos;
 @property (strong, nonatomic) PFObject *photo;
+@property (strong, nonatomic) NSMutableArray *activities;
+
 @property (nonatomic) int currentPhotoIndex;
+@property (nonatomic) BOOL isLikedByCurrentUser;
+@property (nonatomic) BOOL isDislikedByCurrentUser;
+
 
 @end
 
@@ -75,10 +80,12 @@
 
 - (IBAction)likeButtonPressed:(UIButton *)sender
 {
+    [self checkActivity:@"like"];
 }
 
 - (IBAction)dislikeButtonPressed:(UIButton *)sender
 {
+    [self checkActivity:@"dislike"];
 }
 
 - (IBAction)infoButtonPressed:(UIButton *)sender
@@ -101,6 +108,42 @@
                 NSLog(@"%@", error);
             }
         }];
+
+        PFQuery *queryForLike = [PFQuery queryWithClassName:@"Activity"];
+        [queryForLike whereKey:@"type" equalTo:@"like"];
+        [queryForLike whereKey:@"photo" equalTo:self.photo];
+        [queryForLike whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+
+        PFQuery *queryForDislike = [PFQuery queryWithClassName:@"Activity"];
+        [queryForDislike whereKey:@"type" equalTo:@"dislike"];
+        [queryForDislike whereKey:@"photo" equalTo:self.photo];
+        [queryForDislike whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+
+        PFQuery *likeAndDislikeQuery = [PFQuery orQueryWithSubqueries:@[queryForLike, queryForDislike]];
+        [likeAndDislikeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                self.activities = [objects mutableCopy];
+
+                if (![self.activities count]) {
+                    self.isLikedByCurrentUser = NO;
+                    self.isDislikedByCurrentUser = NO;
+                } else {
+                    PFObject *activity = [self.activities firstObject];
+                    if ([activity[@"type"] isEqualToString:@"like"]) {
+                        self.isLikedByCurrentUser = YES;
+                        self.isDislikedByCurrentUser = NO;
+                    } else if ([activity[@"type"] isEqualToString:@"dislike"]) {
+                        self.isLikedByCurrentUser = NO;
+                        self.isDislikedByCurrentUser = YES;
+                    } else {
+                        // Other type of activity not implemented yet
+                    }
+                }
+
+                self.likeButton.enabled = YES;
+                self.dislikeButton.enabled = YES;
+            }
+        }];
     }
 }
 
@@ -109,6 +152,55 @@
     self.firstNameLabel.text = self.photo[@"user"][@"profile"][@"first_name"];
     self.ageLabel.text = [NSString stringWithFormat:@"%@", self.photo[@"user"][@"profile"][@"age"]];
     self.tagLineLabel.text = self.photo[@"user"][@"tagLine"];
+}
+
+- (void)setupNextPhoto
+{
+    if (self.currentPhotoIndex + 1 < [self.photos count]) {
+        self.currentPhotoIndex++;
+        [self queryForCurrentPhotoIndex];
+
+        return;
+    }
+
+    [[[UIAlertView alloc] initWithTitle:@"No more users to view" message:@"Check back later for more people" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+}
+
+- (void)saveActivity:(NSString *)type
+{
+    PFObject *activity = [PFObject objectWithClassName:@"Activity"];
+    [activity setObject:type forKey:@"type"];
+    [activity setObject:[PFUser currentUser] forKey:@"fromUser"];
+    [activity setObject:[self.photo objectForKey:@"user"] forKey:@"toUser"];
+    [activity setObject:self.photo forKey:@"photo"];
+    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        self.isLikedByCurrentUser = [type isEqualToString:@"like"] ? YES : NO;
+        self.isDislikedByCurrentUser = [type isEqualToString:@"like"] ? NO : YES;
+        [self.activities addObject:activity];
+        [self setupNextPhoto];
+    }];
+}
+
+- (void)checkActivity:(NSString *)type
+{
+    // First case : the activity is the same as previously
+    if (([type isEqualToString:@"like"] && self.isLikedByCurrentUser)
+        || ([type isEqualToString:@"dislike"] && self.isDislikedByCurrentUser)) {
+        [self setupNextPhoto];
+
+        return;
+    }
+
+    // Second case : the activity is not the same, we delete previous activity before saving the new one
+    if (([type isEqualToString:@"like"] && self.isDislikedByCurrentUser)
+        || ([type isEqualToString:@"dislike"] && self.isLikedByCurrentUser)) {
+        for (PFObject *activity in self.activities) {
+            [activity deleteInBackground];
+        }
+        [self.activities removeLastObject];
+    }
+
+    [self saveActivity:type];
 }
 
 @end
