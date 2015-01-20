@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6703A8CC1A6E65E900456EAE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8CB1A6E65E900456EAE /* HomeViewController.m */; };
 		67827E3E1A67F30900E3CB07 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 67827E3D1A67F30900E3CB07 /* Constants.m */; };
 		67ED2C291A66BF1200D61305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C281A66BF1200D61305 /* main.m */; };
 		67ED2C2C1A66BF1200D61305 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C2B1A66BF1200D61305 /* AppDelegate.m */; };
-		67ED2C2F1A66BF1200D61305 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C2E1A66BF1200D61305 /* FirstViewController.m */; };
-		67ED2C321A66BF1200D61305 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C311A66BF1200D61305 /* SecondViewController.m */; };
 		67ED2C351A66BF1200D61305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67ED2C331A66BF1200D61305 /* Main.storyboard */; };
 		67ED2C371A66BF1200D61305 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67ED2C361A66BF1200D61305 /* Images.xcassets */; };
 		67ED2C3A1A66BF1200D61305 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67ED2C381A66BF1200D61305 /* LaunchScreen.xib */; };
@@ -33,6 +32,8 @@
 /* Begin PBXFileReference section */
 		26189F1A246D0B56262B575D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1D6FEF11D96F34467267E4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6703A8CA1A6E65E900456EAE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		6703A8CB1A6E65E900456EAE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		67827E3C1A67F30900E3CB07 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		67827E3D1A67F30900E3CB07 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		67ED2C231A66BF1200D61305 /* MatchedUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchedUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,10 +41,6 @@
 		67ED2C281A66BF1200D61305 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67ED2C2A1A66BF1200D61305 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67ED2C2B1A66BF1200D61305 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		67ED2C2D1A66BF1200D61305 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		67ED2C2E1A66BF1200D61305 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		67ED2C301A66BF1200D61305 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		67ED2C311A66BF1200D61305 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		67ED2C341A66BF1200D61305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67ED2C361A66BF1200D61305 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		67ED2C391A66BF1200D61305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -74,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6703A8C91A6E65A900456EAE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6703A8CA1A6E65E900456EAE /* HomeViewController.h */,
+				6703A8CB1A6E65E900456EAE /* HomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		67ED2C1A1A66BF1200D61305 = {
 			isa = PBXGroup;
 			children = (
@@ -100,10 +106,6 @@
 				67ED2C521A66CB2D00D61305 /* Controller */,
 				67ED2C2A1A66BF1200D61305 /* AppDelegate.h */,
 				67ED2C2B1A66BF1200D61305 /* AppDelegate.m */,
-				67ED2C2D1A66BF1200D61305 /* FirstViewController.h */,
-				67ED2C2E1A66BF1200D61305 /* FirstViewController.m */,
-				67ED2C301A66BF1200D61305 /* SecondViewController.h */,
-				67ED2C311A66BF1200D61305 /* SecondViewController.m */,
 				67ED2C331A66BF1200D61305 /* Main.storyboard */,
 				67ED2C361A66BF1200D61305 /* Images.xcassets */,
 				67ED2C381A66BF1200D61305 /* LaunchScreen.xib */,
@@ -143,6 +145,7 @@
 		67ED2C521A66CB2D00D61305 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6703A8C91A6E65A900456EAE /* Home */,
 				67ED2C531A66CB3800D61305 /* Login */,
 			);
 			path = Controller;
@@ -309,11 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67ED2C321A66BF1200D61305 /* SecondViewController.m in Sources */,
 				67ED2C2C1A66BF1200D61305 /* AppDelegate.m in Sources */,
-				67ED2C2F1A66BF1200D61305 /* FirstViewController.m in Sources */,
 				67ED2C291A66BF1200D61305 /* main.m in Sources */,
 				67ED2C511A66CB0B00D61305 /* LoginViewController.m in Sources */,
+				6703A8CC1A6E65E900456EAE /* HomeViewController.m in Sources */,
 				67827E3E1A67F30900E3CB07 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
