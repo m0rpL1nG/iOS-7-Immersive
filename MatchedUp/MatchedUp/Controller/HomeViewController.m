@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import <Parse/Parse.h>
+#import "Constants.h"
 
 @interface HomeViewController ()
 
@@ -40,8 +41,8 @@
     // Do any additional setup after loading the view.
     self.currentPhotoIndex = 0;
 
-    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
-    [query includeKey:@"user"];
+    PFQuery *query = [PFQuery queryWithClassName:kPhotoClassKey];
+    [query includeKey:kPhotoUserKey];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.photos = objects;
@@ -98,7 +99,7 @@
 {
     if ([self.photos count] > 0) {
         self.photo = self.photos[self.currentPhotoIndex];
-        PFFile *file = self.photo[@"image"];
+        PFFile *file = self.photo[kPhotoPictureKey];
         [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (!error) {
                 UIImage *image = [UIImage imageWithData:data];
@@ -109,15 +110,15 @@
             }
         }];
 
-        PFQuery *queryForLike = [PFQuery queryWithClassName:@"Activity"];
-        [queryForLike whereKey:@"type" equalTo:@"like"];
-        [queryForLike whereKey:@"photo" equalTo:self.photo];
-        [queryForLike whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+        PFQuery *queryForLike = [PFQuery queryWithClassName:kActivityClassKey];
+        [queryForLike whereKey:kActivityTypeKey equalTo:kActivityTypeLikeKey];
+        [queryForLike whereKey:kActivityPhotoKey equalTo:self.photo];
+        [queryForLike whereKey:kActivityFromUserKey equalTo:[PFUser currentUser]];
 
-        PFQuery *queryForDislike = [PFQuery queryWithClassName:@"Activity"];
-        [queryForDislike whereKey:@"type" equalTo:@"dislike"];
-        [queryForDislike whereKey:@"photo" equalTo:self.photo];
-        [queryForDislike whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+        PFQuery *queryForDislike = [PFQuery queryWithClassName:kActivityClassKey];
+        [queryForDislike whereKey:kActivityTypeKey equalTo:kActivityTypeDislikeKey];
+        [queryForDislike whereKey:kActivityPhotoKey equalTo:self.photo];
+        [queryForDislike whereKey:kActivityFromUserKey equalTo:[PFUser currentUser]];
 
         PFQuery *likeAndDislikeQuery = [PFQuery orQueryWithSubqueries:@[queryForLike, queryForDislike]];
         [likeAndDislikeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -129,10 +130,10 @@
                     self.isDislikedByCurrentUser = NO;
                 } else {
                     PFObject *activity = [self.activities firstObject];
-                    if ([activity[@"type"] isEqualToString:@"like"]) {
+                    if ([activity[kActivityTypeKey] isEqualToString:kActivityTypeLikeKey]) {
                         self.isLikedByCurrentUser = YES;
                         self.isDislikedByCurrentUser = NO;
-                    } else if ([activity[@"type"] isEqualToString:@"dislike"]) {
+                    } else if ([activity[kActivityTypeKey] isEqualToString:kActivityTypeDislikeKey]) {
                         self.isLikedByCurrentUser = NO;
                         self.isDislikedByCurrentUser = YES;
                     } else {
@@ -149,9 +150,9 @@
 
 - (void)updateView
 {
-    self.firstNameLabel.text = self.photo[@"user"][@"profile"][@"first_name"];
-    self.ageLabel.text = [NSString stringWithFormat:@"%@", self.photo[@"user"][@"profile"][@"age"]];
-    self.tagLineLabel.text = self.photo[@"user"][@"tagLine"];
+    self.firstNameLabel.text = self.photo[kPhotoUserKey][kUserProfileKey][kUserProfileFirstNameKey];
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", self.photo[kPhotoUserKey][kUserProfileKey][kUserProfileAgeKey]];
+    self.tagLineLabel.text = self.photo[kPhotoUserKey][kUserTagLineKey];
 }
 
 - (void)setupNextPhoto
@@ -168,14 +169,14 @@
 
 - (void)saveActivity:(NSString *)type
 {
-    PFObject *activity = [PFObject objectWithClassName:@"Activity"];
-    [activity setObject:type forKey:@"type"];
-    [activity setObject:[PFUser currentUser] forKey:@"fromUser"];
-    [activity setObject:[self.photo objectForKey:@"user"] forKey:@"toUser"];
-    [activity setObject:self.photo forKey:@"photo"];
+    PFObject *activity = [PFObject objectWithClassName:kActivityClassKey];
+    [activity setObject:type forKey:kActivityTypeKey];
+    [activity setObject:[PFUser currentUser] forKey:kActivityFromUserKey];
+    [activity setObject:[self.photo objectForKey:kPhotoUserKey] forKey:kActivityToUserKey];
+    [activity setObject:self.photo forKey:kActivityPhotoKey];
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        self.isLikedByCurrentUser = [type isEqualToString:@"like"] ? YES : NO;
-        self.isDislikedByCurrentUser = [type isEqualToString:@"like"] ? NO : YES;
+        self.isLikedByCurrentUser = [type isEqualToString:kActivityTypeLikeKey] ? YES : NO;
+        self.isDislikedByCurrentUser = [type isEqualToString:kActivityTypeLikeKey] ? NO : YES;
         [self.activities addObject:activity];
         [self setupNextPhoto];
     }];
@@ -184,16 +185,16 @@
 - (void)checkActivity:(NSString *)type
 {
     // First case : the activity is the same as previously
-    if (([type isEqualToString:@"like"] && self.isLikedByCurrentUser)
-        || ([type isEqualToString:@"dislike"] && self.isDislikedByCurrentUser)) {
+    if (([type isEqualToString:kActivityTypeLikeKey] && self.isLikedByCurrentUser)
+        || ([type isEqualToString:kActivityTypeDislikeKey] && self.isDislikedByCurrentUser)) {
         [self setupNextPhoto];
 
         return;
     }
 
     // Second case : the activity is not the same, we delete previous activity before saving the new one
-    if (([type isEqualToString:@"like"] && self.isDislikedByCurrentUser)
-        || ([type isEqualToString:@"dislike"] && self.isLikedByCurrentUser)) {
+    if (([type isEqualToString:kActivityTypeLikeKey] && self.isDislikedByCurrentUser)
+        || ([type isEqualToString:kActivityTypeDislikeKey] && self.isLikedByCurrentUser)) {
         for (PFObject *activity in self.activities) {
             [activity deleteInBackground];
         }
