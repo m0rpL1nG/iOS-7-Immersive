@@ -20,12 +20,22 @@
 
 @implementation LoginViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewDidAppear:(BOOL)animated
+{
+    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self updateUserInformation];
+        [self performSegueWithIdentifier:@"loginToTabBarSegue" sender:self];
+    }
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
