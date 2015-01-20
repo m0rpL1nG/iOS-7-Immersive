@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import <Parse/Parse.h>
 #import "Constants.h"
+#import "ProfileViewController.h"
 
 @interface HomeViewController ()
 
@@ -61,15 +62,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"homeToProfileSegue"]) {
+        ProfileViewController *profileVC = [segue destinationViewController];
+        profileVC.photo = self.photo;
+    }
 }
-*/
 
 #pragma mark - IBActions
 
@@ -93,6 +96,7 @@
 
 - (IBAction)infoButtonPressed:(UIButton *)sender
 {
+    [self performSegueWithIdentifier:@"homeToProfileSegue" sender:nil];
 }
 
 #pragma mark - Helper methods
@@ -145,6 +149,7 @@
 
                 self.likeButton.enabled = YES;
                 self.dislikeButton.enabled = YES;
+                self.infoButton.enabled = YES;
             }
         }];
     }
