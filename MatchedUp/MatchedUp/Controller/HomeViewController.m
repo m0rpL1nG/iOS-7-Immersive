@@ -96,11 +96,19 @@
             if (!error) {
                 UIImage *image = [UIImage imageWithData:data];
                 self.photoImageView.image = image;
+                [self updateView];
             } else {
                 NSLog(@"%@", error);
             }
         }];
     }
+}
+
+- (void)updateView
+{
+    self.firstNameLabel.text = self.photo[@"user"][@"profile"][@"first_name"];
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", self.photo[@"user"][@"profile"][@"age"]];
+    self.tagLineLabel.text = self.photo[@"user"][@"tagLine"];
 }
 
 @end
