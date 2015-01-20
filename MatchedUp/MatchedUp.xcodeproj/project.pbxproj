@@ -10,6 +10,7 @@
 		6703A8CC1A6E65E900456EAE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8CB1A6E65E900456EAE /* HomeViewController.m */; };
 		6703A8D01A6E6D8E00456EAE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8CF1A6E6D8E00456EAE /* SettingsViewController.m */; };
 		6703A8D41A6E6FF200456EAE /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8D31A6E6FF200456EAE /* EditProfileViewController.m */; };
+		6703A8D81A6E71F100456EAE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8D71A6E71F100456EAE /* ProfileViewController.m */; };
 		67827E3E1A67F30900E3CB07 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 67827E3D1A67F30900E3CB07 /* Constants.m */; };
 		67ED2C291A66BF1200D61305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C281A66BF1200D61305 /* main.m */; };
 		67ED2C2C1A66BF1200D61305 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C2B1A66BF1200D61305 /* AppDelegate.m */; };
@@ -40,6 +41,8 @@
 		6703A8CF1A6E6D8E00456EAE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		6703A8D21A6E6FF200456EAE /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		6703A8D31A6E6FF200456EAE /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
+		6703A8D61A6E71F100456EAE /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		6703A8D71A6E71F100456EAE /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		67827E3C1A67F30900E3CB07 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		67827E3D1A67F30900E3CB07 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		67ED2C231A66BF1200D61305 /* MatchedUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchedUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +105,15 @@
 				6703A8D31A6E6FF200456EAE /* EditProfileViewController.m */,
 			);
 			name = EditProfile;
+			sourceTree = "<group>";
+		};
+		6703A8D51A6E71CF00456EAE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6703A8D61A6E71F100456EAE /* ProfileViewController.h */,
+				6703A8D71A6E71F100456EAE /* ProfileViewController.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		67ED2C1A1A66BF1200D61305 = {
@@ -169,6 +181,7 @@
 		67ED2C521A66CB2D00D61305 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6703A8D51A6E71CF00456EAE /* Profile */,
 				6703A8D11A6E6FD600456EAE /* EditProfile */,
 				6703A8CD1A6E6D7C00456EAE /* Settings */,
 				6703A8C91A6E65A900456EAE /* Home */,
@@ -340,6 +353,7 @@
 			files = (
 				67ED2C2C1A66BF1200D61305 /* AppDelegate.m in Sources */,
 				67ED2C291A66BF1200D61305 /* main.m in Sources */,
+				6703A8D81A6E71F100456EAE /* ProfileViewController.m in Sources */,
 				6703A8D41A6E6FF200456EAE /* EditProfileViewController.m in Sources */,
 				67ED2C511A66CB0B00D61305 /* LoginViewController.m in Sources */,
 				6703A8D01A6E6D8E00456EAE /* SettingsViewController.m in Sources */,
