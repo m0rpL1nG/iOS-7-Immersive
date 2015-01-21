@@ -7,6 +7,8 @@
 //
 
 #import "MatchViewController.h"
+#import <Parse/Parse.h>
+#import "Constants.h"
 
 @interface MatchViewController ()
 
@@ -22,6 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    PFQuery *query = [PFQuery queryWithClassName:kPhotoClassKey];
+    [query whereKey:kPhotoUserKey equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count]) {
+            PFObject *photo = [objects firstObject];
+            PFFile *pictureFile = photo[kPhotoPictureKey];
+            [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                self.currentUserImageView.image = [UIImage imageWithData:data];
+                self.matchedUserImageView.image = self.matchedUserImage;
+            }];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,10 +58,12 @@
 
 - (IBAction)viewChatsButtonPressed:(UIButton *)sender
 {
+    [self.delegate presentMatchesViewController];
 }
 
 - (IBAction)keepSearchingButtonPressed:(UIButton *)sender
 {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

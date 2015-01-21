@@ -7,7 +7,10 @@
 //
 
 #import "JSQMessagesViewController.h"
+#import <Parse/Parse.h>
 
-@interface ChatViewController : JSQMessagesViewController
+@interface ChatViewController : JSQMessagesViewController <JSQMessagesCollectionViewDataSource, JSQMessagesCollectionViewCellDelegate>
+
+@property (strong, nonatomic) PFObject *chatroom;
 
 @end
