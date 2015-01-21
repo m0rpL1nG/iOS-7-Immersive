@@ -7,6 +7,8 @@
 //
 
 #import "EditProfileViewController.h"
+#import <Parse/Parse.h>
+#import "Constants.h"
 
 @interface EditProfileViewController ()
 
@@ -21,6 +23,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    PFQuery *query = [PFQuery queryWithClassName:kPhotoClassKey];
+    [query whereKey:kPhotoUserKey equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count]) {
+            PFObject *photo = [objects firstObject];
+            PFFile *file = photo[kPhotoPictureKey];
+            [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                self.profilePictureImageView.image = [UIImage imageWithData:data];
+            }];
+        }
+    }];
+
+    self.tagLineTextView.text = [[PFUser currentUser] objectForKey:kUserTagLineKey];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,7 +58,10 @@
 
 - (IBAction)saveBarButtonItemPressed:(UIBarButtonItem *)sender
 {
-}
+    [[PFUser currentUser] setObject:self.tagLineTextView.text forKey:kUserTagLineKey];
+    [[PFUser currentUser] saveInBackground];
 
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
