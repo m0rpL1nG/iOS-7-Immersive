@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "Constants.h"
 
 @interface SettingsViewController ()
 
@@ -25,6 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    // Initialize sliders
+    self.ageSlider.value = [[NSUserDefaults standardUserDefaults] integerForKey:kSettingsAgeMaxKey];
+    self.showMenSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kSettingsMenEnabledKey];
+    self.showWomenSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kSettingsWomenEnabledKey];
+    self.onlySinglesSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kSettingsSingleEnabledKey];
+    // Add handler for event change
+    [self.ageSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.showMenSwitch addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.showWomenSwitch addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.onlySinglesSwitch addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+
+    self.ageLabel.text = [NSString stringWithFormat:@"%i", (int) self.ageSlider.value];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,5 +66,21 @@
 {
 }
 
+#pragma mark - Helper methods
+
+- (void)valueChanged:(id)sender
+{
+    if (sender == self.ageSlider) {
+        [[NSUserDefaults standardUserDefaults] setInteger:self.ageSlider.value forKey:kSettingsAgeMaxKey];
+        self.ageLabel.text = [NSString stringWithFormat:@"%i", (int) self.ageSlider.value];
+    } else if (sender == self.showMenSwitch) {
+        [[NSUserDefaults standardUserDefaults] setBool:self.showMenSwitch.isOn forKey:kSettingsMenEnabledKey];
+    } else if (sender == self.showWomenSwitch) {
+        [[NSUserDefaults standardUserDefaults] setBool:self.showWomenSwitch.isOn forKey:kSettingsWomenEnabledKey];
+    } else if (sender == self.onlySinglesSwitch) {
+        [[NSUserDefaults standardUserDefaults] setBool:self.onlySinglesSwitch.isOn forKey:kSettingsSingleEnabledKey];
+    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 @end
