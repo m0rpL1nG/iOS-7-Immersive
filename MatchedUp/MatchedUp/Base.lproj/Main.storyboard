@@ -131,11 +131,141 @@
                         <outlet property="settingsBarButtonItem" destination="sdc-v0-56c" id="COU-nV-cpI"/>
                         <outlet property="tagLineLabel" destination="I1j-zf-hRt" id="PGy-el-Qay"/>
                         <segue destination="YKH-OG-7Zu" kind="push" identifier="homeToProfileSegue" id="ii7-R4-1JE"/>
+                        <segue destination="5H2-tB-oYY" kind="modal" identifier="homeToMatchSegue" id="Kgs-8Z-thG"/>
+                        <segue destination="FJq-Bj-1JN" kind="push" identifier="homeToMatchesSegue" id="yzb-1E-noB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6PS-v2-3B7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="594" y="5"/>
+        </scene>
+        <!--Match View Controller-->
+        <scene sceneID="NhH-9R-eMT">
+            <objects>
+                <viewController id="5H2-tB-oYY" customClass="MatchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Nl-lV-jFI"/>
+                        <viewControllerLayoutGuide type="bottom" id="O8k-8V-P8e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W7e-qV-YTB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It's a match!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAz-gQ-uHQ">
+                                <rect key="frame" x="113" y="273" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-0O-tzk">
+                                <rect key="frame" x="16" y="324" width="77" height="30"/>
+                                <state key="normal" title="View Chats">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewChatsButtonPressed:" destination="5H2-tB-oYY" eventType="touchUpInside" id="zn3-lc-snQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwK-k9-r4d">
+                                <rect key="frame" x="197" y="324" width="107" height="30"/>
+                                <state key="normal" title="Keep searching">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keepSearchingButtonPressed:" destination="5H2-tB-oYY" eventType="touchUpInside" id="3Ed-bd-1Bi"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Op6-nr-4yV">
+                                <rect key="frame" x="16" y="104" width="130" height="130"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jb7-nD-MCj">
+                                <rect key="frame" x="174" y="104" width="130" height="130"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="X5d-Nr-DbE"/>
+                    <connections>
+                        <outlet property="currentUserImageView" destination="jb7-nD-MCj" id="Ynz-fG-7XC"/>
+                        <outlet property="keepSearchingButton" destination="vwK-k9-r4d" id="Mhx-ZM-qOL"/>
+                        <outlet property="matchedUserImageView" destination="Op6-nr-4yV" id="SNe-hY-ehh"/>
+                        <outlet property="viewChatsButton" destination="ZcF-0O-tzk" id="PRS-TI-VEk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nd9-0g-HjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="594" y="760"/>
+        </scene>
+        <!--Matches View Controller-->
+        <scene sceneID="car-bE-NNj">
+            <objects>
+                <viewController id="FJq-Bj-1JN" customClass="MatchesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LOc-U5-ubz"/>
+                        <viewControllerLayoutGuide type="bottom" id="qjy-YJ-ONY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f7d-xP-gox">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H6h-c8-lqn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="yM0-R8-Ulc" detailTextLabel="FUp-WJ-YCS" style="IBUITableViewCellStyleSubtitle" id="nX2-J5-bLQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nX2-J5-bLQ" id="rnA-FN-TVV">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yM0-R8-Ulc">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FUp-WJ-YCS">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1yq-Lk-bAT"/>
+                    <connections>
+                        <outlet property="tableView" destination="H6h-c8-lqn" id="DPr-bT-KOw"/>
+                        <segue destination="GhS-fb-ci8" kind="push" identifier="matchesToChatSegue" id="PDr-nI-Ycm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHY-vH-2gB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1144" y="760"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="DdR-yk-IuE">
+            <objects>
+                <viewController id="GhS-fb-ci8" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YBn-lc-ucb"/>
+                        <viewControllerLayoutGuide type="bottom" id="QEt-z6-tOI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4zA-QU-eEV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YvY-Ga-72q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQK-kB-k1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="760"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="2EX-0b-ft7">
