@@ -41,6 +41,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.photoImageView.image = nil;
+    self.firstNameLabel.text = nil;
+    self.ageLabel.text = nil;
+    self.tagLineLabel.text = nil;
 
     self.currentPhotoIndex = 0;
 
@@ -50,17 +64,15 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.photos = objects;
-            [self queryForCurrentPhotoIndex];
+            if (![self allowPhoto]) {
+                [self setupNextPhoto];
+            } else {
+                [self queryForCurrentPhotoIndex];
+            }
         } else {
             NSLog(@"%@", error);
         }
     }];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Navigation
@@ -172,12 +184,41 @@
 {
     if (self.currentPhotoIndex + 1 < [self.photos count]) {
         self.currentPhotoIndex++;
-        [self queryForCurrentPhotoIndex];
+        if ([self allowPhoto]) {
+            [self queryForCurrentPhotoIndex];
+        } else {
+            [self setupNextPhoto];
+        }
 
         return;
     }
 
     [[[UIAlertView alloc] initWithTitle:@"No more users to view" message:@"Check back later for more people" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+}
+
+- (BOOL)allowPhoto
+{
+    int maxAge = [[NSUserDefaults standardUserDefaults] integerForKey:kSettingsAgeMaxKey];
+    BOOL men = [[NSUserDefaults standardUserDefaults] boolForKey:kSettingsMenEnabledKey];
+    BOOL women = [[NSUserDefaults standardUserDefaults] boolForKey:kSettingsWomenEnabledKey];
+    BOOL singles = [[NSUserDefaults standardUserDefaults] boolForKey:kSettingsSingleEnabledKey];
+
+    PFObject *photo = self.photos[self.currentPhotoIndex];
+    PFUser *user = photo[kPhotoUserKey];
+    int userAge = [user[kUserProfileKey][kUserProfileAgeKey] intValue];
+    NSString *gender = user[kUserProfileKey][kUserProfileGenderKey];
+    NSString *relationshipStatus = user[kUserProfileKey][kUserProfileRelationshipStatusKey];
+
+    if (
+        userAge > maxAge
+        || (men == NO && [gender isEqualToString:@"male"])
+        || (women == NO && [gender isEqualToString:@"female"])
+        || (singles == NO && ([relationshipStatus isEqualToString:@"single"] || relationshipStatus == nil))
+    ) {
+        return NO;
+    }
+
+    return YES;
 }
 
 - (void)saveActivity:(NSString *)type
