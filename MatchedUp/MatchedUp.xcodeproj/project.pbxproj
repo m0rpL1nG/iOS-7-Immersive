@@ -13,7 +13,11 @@
 		6703A8D81A6E71F100456EAE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8D71A6E71F100456EAE /* ProfileViewController.m */; };
 		6703A8DB1A6EBF4200456EAE /* TestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8DA1A6EBF4200456EAE /* TestUser.m */; };
 		6703A8DD1A6EC13300456EAE /* ProfileImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6703A8DC1A6EC13200456EAE /* ProfileImage1.jpg */; };
+		675560651A77E8CB001852F4 /* defaultPrefsFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 675560641A77E8CB001852F4 /* defaultPrefsFile.plist */; };
 		67827E3E1A67F30900E3CB07 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 67827E3D1A67F30900E3CB07 /* Constants.m */; };
+		67C8BC311A6FCB4D0049A556 /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8BC301A6FCB4D0049A556 /* MatchViewController.m */; };
+		67C8BC351A6FCCFC0049A556 /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8BC341A6FCCFC0049A556 /* MatchesViewController.m */; };
+		67C8BC391A6FD1A90049A556 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8BC381A6FD1A90049A556 /* ChatViewController.m */; };
 		67ED2C291A66BF1200D61305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C281A66BF1200D61305 /* main.m */; };
 		67ED2C2C1A66BF1200D61305 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED2C2B1A66BF1200D61305 /* AppDelegate.m */; };
 		67ED2C351A66BF1200D61305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67ED2C331A66BF1200D61305 /* Main.storyboard */; };
@@ -48,8 +52,15 @@
 		6703A8D91A6EBF4200456EAE /* TestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUser.h; sourceTree = "<group>"; };
 		6703A8DA1A6EBF4200456EAE /* TestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUser.m; sourceTree = "<group>"; };
 		6703A8DC1A6EC13200456EAE /* ProfileImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProfileImage1.jpg; sourceTree = "<group>"; };
+		675560641A77E8CB001852F4 /* defaultPrefsFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultPrefsFile.plist; path = Controller/defaultPrefsFile.plist; sourceTree = "<group>"; };
 		67827E3C1A67F30900E3CB07 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		67827E3D1A67F30900E3CB07 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		67C8BC2F1A6FCB4D0049A556 /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
+		67C8BC301A6FCB4D0049A556 /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
+		67C8BC331A6FCCFC0049A556 /* MatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
+		67C8BC341A6FCCFC0049A556 /* MatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchesViewController.m; sourceTree = "<group>"; };
+		67C8BC371A6FD1A90049A556 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		67C8BC381A6FD1A90049A556 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		67ED2C231A66BF1200D61305 /* MatchedUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchedUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67ED2C271A66BF1200D61305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67ED2C281A66BF1200D61305 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -121,6 +132,33 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		67C8BC2E1A6FCB150049A556 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				67C8BC2F1A6FCB4D0049A556 /* MatchViewController.h */,
+				67C8BC301A6FCB4D0049A556 /* MatchViewController.m */,
+			);
+			name = Match;
+			sourceTree = "<group>";
+		};
+		67C8BC321A6FCCE80049A556 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				67C8BC331A6FCCFC0049A556 /* MatchesViewController.h */,
+				67C8BC341A6FCCFC0049A556 /* MatchesViewController.m */,
+			);
+			name = Matches;
+			sourceTree = "<group>";
+		};
+		67C8BC361A6FCD560049A556 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				67C8BC371A6FD1A90049A556 /* ChatViewController.h */,
+				67C8BC381A6FD1A90049A556 /* ChatViewController.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
 		67ED2C1A1A66BF1200D61305 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +198,7 @@
 		67ED2C261A66BF1200D61305 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				675560641A77E8CB001852F4 /* defaultPrefsFile.plist */,
 				6703A8DC1A6EC13200456EAE /* ProfileImage1.jpg */,
 				67ED2C271A66BF1200D61305 /* Info.plist */,
 				67ED2C281A66BF1200D61305 /* main.m */,
@@ -189,6 +228,9 @@
 		67ED2C521A66CB2D00D61305 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				67C8BC361A6FCD560049A556 /* Chat */,
+				67C8BC321A6FCCE80049A556 /* Matches */,
+				67C8BC2E1A6FCB150049A556 /* Match */,
 				6703A8D51A6E71CF00456EAE /* Profile */,
 				6703A8D11A6E6FD600456EAE /* EditProfile */,
 				6703A8CD1A6E6D7C00456EAE /* Settings */,
@@ -310,6 +352,7 @@
 				6703A8DD1A6EC13300456EAE /* ProfileImage1.jpg in Resources */,
 				67ED2C3A1A66BF1200D61305 /* LaunchScreen.xib in Resources */,
 				67ED2C371A66BF1200D61305 /* Images.xcassets in Resources */,
+				675560651A77E8CB001852F4 /* defaultPrefsFile.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +404,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				67ED2C2C1A66BF1200D61305 /* AppDelegate.m in Sources */,
+				67C8BC351A6FCCFC0049A556 /* MatchesViewController.m in Sources */,
+				67C8BC391A6FD1A90049A556 /* ChatViewController.m in Sources */,
 				67ED2C291A66BF1200D61305 /* main.m in Sources */,
 				6703A8D81A6E71F100456EAE /* ProfileViewController.m in Sources */,
 				6703A8D41A6E6FF200456EAE /* EditProfileViewController.m in Sources */,
@@ -368,6 +413,7 @@
 				67ED2C511A66CB0B00D61305 /* LoginViewController.m in Sources */,
 				6703A8D01A6E6D8E00456EAE /* SettingsViewController.m in Sources */,
 				6703A8CC1A6E65E900456EAE /* HomeViewController.m in Sources */,
+				67C8BC311A6FCB4D0049A556 /* MatchViewController.m in Sources */,
 				67827E3E1A67F30900E3CB07 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

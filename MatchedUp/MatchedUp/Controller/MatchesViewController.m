@@ -65,7 +65,7 @@
     PFObject *chatroom = self.availableChatRooms[indexPath.row];
     PFUser *currentUser = [PFUser currentUser];
     PFUser *user1 = [chatroom objectForKey:@"user1"];
-    PFUser *likedUser = user1.objectId == currentUser.objectId ? [chatroom objectForKey:@"user2"] : [chatroom objectForKey:@"user1"];
+    PFUser *likedUser = [user1.objectId isEqual:currentUser.objectId] ? [chatroom objectForKey:@"user2"] : [chatroom objectForKey:@"user1"];
 
     cell.textLabel.text = likedUser[@"profile"][@"firstName"];
     // cell.imageView.image = place holder image
@@ -81,6 +81,7 @@
                 if (!error) {
                     cell.imageView.image = [UIImage imageWithData:data];
                     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+                    [cell setNeedsLayout];
                 }
             }];
         }

@@ -83,6 +83,7 @@
 
 - (IBAction)chatBarbuttonItemPressed:(UIBarButtonItem *)sender
 {
+    [self performSegueWithIdentifier:@"homeToMatchesSegue" sender:nil];
 }
 
 - (IBAction)settingsBarButtonItemPressed:(UIBarButtonItem *)sender
