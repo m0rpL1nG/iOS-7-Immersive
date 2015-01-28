@@ -14,6 +14,7 @@
 		6703A8DB1A6EBF4200456EAE /* TestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6703A8DA1A6EBF4200456EAE /* TestUser.m */; };
 		6703A8DD1A6EC13300456EAE /* ProfileImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6703A8DC1A6EC13200456EAE /* ProfileImage1.jpg */; };
 		675560651A77E8CB001852F4 /* defaultPrefsFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 675560641A77E8CB001852F4 /* defaultPrefsFile.plist */; };
+		675561A81A79320E001852F4 /* TransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 675561A71A79320E001852F4 /* TransitionAnimator.m */; };
 		67827E3E1A67F30900E3CB07 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 67827E3D1A67F30900E3CB07 /* Constants.m */; };
 		67C8BC311A6FCB4D0049A556 /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8BC301A6FCB4D0049A556 /* MatchViewController.m */; };
 		67C8BC351A6FCCFC0049A556 /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8BC341A6FCCFC0049A556 /* MatchesViewController.m */; };
@@ -53,6 +54,8 @@
 		6703A8DA1A6EBF4200456EAE /* TestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUser.m; sourceTree = "<group>"; };
 		6703A8DC1A6EC13200456EAE /* ProfileImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProfileImage1.jpg; sourceTree = "<group>"; };
 		675560641A77E8CB001852F4 /* defaultPrefsFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultPrefsFile.plist; path = Controller/defaultPrefsFile.plist; sourceTree = "<group>"; };
+		675561A61A79320E001852F4 /* TransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimator.h; sourceTree = "<group>"; };
+		675561A71A79320E001852F4 /* TransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimator.m; sourceTree = "<group>"; };
 		67827E3C1A67F30900E3CB07 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		67827E3D1A67F30900E3CB07 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		67C8BC2F1A6FCB4D0049A556 /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
@@ -132,6 +135,31 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		675561A31A7931E4001852F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				675561A41A7931E8001852F4 /* Segue */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		675561A41A7931E8001852F4 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				675561A51A7931EC001852F4 /* Transition */,
+			);
+			name = Segue;
+			sourceTree = "<group>";
+		};
+		675561A51A7931EC001852F4 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				675561A61A79320E001852F4 /* TransitionAnimator.h */,
+				675561A71A79320E001852F4 /* TransitionAnimator.m */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
 		67C8BC2E1A6FCB150049A556 /* Match */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +210,7 @@
 		67ED2C251A66BF1200D61305 /* MatchedUp */ = {
 			isa = PBXGroup;
 			children = (
+				675561A31A7931E4001852F4 /* View */,
 				67ED2C521A66CB2D00D61305 /* Controller */,
 				67ED2C2A1A66BF1200D61305 /* AppDelegate.h */,
 				67ED2C2B1A66BF1200D61305 /* AppDelegate.m */,
@@ -406,6 +435,7 @@
 				67ED2C2C1A66BF1200D61305 /* AppDelegate.m in Sources */,
 				67C8BC351A6FCCFC0049A556 /* MatchesViewController.m in Sources */,
 				67C8BC391A6FD1A90049A556 /* ChatViewController.m in Sources */,
+				675561A81A79320E001852F4 /* TransitionAnimator.m in Sources */,
 				67ED2C291A66BF1200D61305 /* main.m in Sources */,
 				6703A8D81A6E71F100456EAE /* ProfileViewController.m in Sources */,
 				6703A8D41A6E6FF200456EAE /* EditProfileViewController.m in Sources */,
