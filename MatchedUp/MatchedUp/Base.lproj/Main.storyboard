@@ -382,7 +382,7 @@
             </objects>
             <point key="canvasLocation" x="1139" y="5"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="gPJ-Ed-PcN">
             <objects>
                 <viewController id="hY1-Fp-ZHA" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -442,20 +442,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo0-Eb-LwD">
-                                <rect key="frame" x="16" y="518" width="49" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutButtonPressed:" destination="hY1-Fp-ZHA" eventType="touchUpInside" id="smj-2m-xAn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-1f-3CR">
-                                <rect key="frame" x="229" y="518" width="75" height="30"/>
+                                <rect key="frame" x="16" y="468" width="288" height="32"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Edit Profile">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Edit Profile" backgroundImage="button-background-default">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -463,10 +455,22 @@
                                     <segue destination="gz2-gk-dDL" kind="push" id="rgl-eH-cEW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo0-Eb-LwD">
+                                <rect key="frame" x="16" y="516" width="288" height="32"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Logout" backgroundImage="button-background-default">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="hY1-Fp-ZHA" eventType="touchUpInside" id="smj-2m-xAn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="07a-C6-Q1T"/>
+                    <navigationItem key="navigationItem" title="Settings" id="07a-C6-Q1T"/>
                     <connections>
                         <outlet property="ageLabel" destination="Rf3-S9-0D3" id="kFV-yt-h4k"/>
                         <outlet property="ageSlider" destination="mcM-aV-gnY" id="QlH-R8-4XP"/>
@@ -549,6 +553,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button-background-default" width="253" height="32"/>
         <image name="button-background-facebook" width="200" height="25"/>
         <image name="icon-age" width="19" height="19"/>
         <image name="icon-chat" width="22" height="22"/>
