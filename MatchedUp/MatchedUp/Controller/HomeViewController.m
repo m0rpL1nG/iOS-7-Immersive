@@ -19,10 +19,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tagLineLabel;
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
 @property (weak, nonatomic) IBOutlet UIButton *dislikeButton;
+@property (weak, nonatomic) IBOutlet UIView *labelContainerView;
+@property (weak, nonatomic) IBOutlet UIView *buttonContainerView;
 
 @property (strong, nonatomic) NSArray *photos;
 @property (strong, nonatomic) PFObject *photo;
@@ -41,6 +42,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [self setUpViews];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +57,6 @@
     self.photoImageView.image = nil;
     self.firstNameLabel.text = nil;
     self.ageLabel.text = nil;
-    self.tagLineLabel.text = nil;
 
     self.currentPhotoIndex = 0;
 
@@ -73,6 +75,24 @@
             NSLog(@"%@", error);
         }
     }];
+}
+
+- (void)setUpViews
+{
+    self.view.backgroundColor = [UIColor colorWithRed:242 / 255.0 green:242 / 255.0 blue:242 / 255.0 alpha:1.0];
+
+    [self addShadowForView:self.buttonContainerView];
+    [self addShadowForView:self.labelContainerView];
+    self.photoImageView.layer.masksToBounds = YES;
+}
+
+- (void)addShadowForView:(UIView *)view
+{
+    view.layer.masksToBounds = NO;
+    view.layer.cornerRadius = 4;
+    view.layer.shadowRadius = 1;
+    view.layer.shadowOffset = CGSizeMake(0, 1);
+    view.layer.shadowOpacity = 0.25;
 }
 
 #pragma mark - Navigation
@@ -177,7 +197,6 @@
 {
     self.firstNameLabel.text = self.photo[kPhotoUserKey][kUserProfileKey][kUserProfileFirstNameKey];
     self.ageLabel.text = [NSString stringWithFormat:@"%@", self.photo[kPhotoUserKey][kUserProfileKey][kUserProfileAgeKey]];
-    self.tagLineLabel.text = self.photo[kPhotoUserKey][kUserTagLineKey];
 }
 
 - (void)setupNextPhoto
