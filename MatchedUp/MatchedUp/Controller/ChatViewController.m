@@ -81,7 +81,7 @@
 {
     JSQMessagesCollectionViewCell *cell = (JSQMessagesCollectionViewCell *)[super collectionView:collectionView cellForItemAtIndexPath:indexPath];
 
-    cell.textView.font = [UIFont systemFontOfSize:16.0f];
+    cell.textView.font = [UIFont fontWithName:@"HelveticaNeue" size:17.0f];
 
     return cell;
 }
