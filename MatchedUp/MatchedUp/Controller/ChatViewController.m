@@ -8,6 +8,7 @@
 
 #import "ChatViewController.h"
 #import <JSQSystemSoundPlayer+JSQMessages.h>
+#import "Constants.h"
 
 @interface ChatViewController ()
 
@@ -42,17 +43,17 @@
     [self.collectionView setBackgroundColor:[UIColor whiteColor]];
 
     self.currentUser = [PFUser currentUser];
-    PFUser *testUser1 = self.chatroom[@"user1"];
+    PFUser *testUser1 = self.chatroom[kChatRoomUser1Key];
     if ([testUser1.objectId isEqual:self.currentUser.objectId]) {
-        self.withUser = self.chatroom[@"user2"];
+        self.withUser = self.chatroom[kChatRoomUser2Key];
     } else {
-        self.withUser = self.chatroom[@"user1"];
+        self.withUser = self.chatroom[kChatRoomUser1Key];
     }
-    self.title = self.withUser[@"profile"][@"firstName"];
+    self.title = self.withUser[kUserProfileKey][kUserProfileFirstNameKey];
     self.initialLoadComplete = NO;
 
     self.senderId = self.currentUser.objectId;
-    self.senderDisplayName = self.currentUser[@"profile"][@"name"];
+    self.senderDisplayName = self.currentUser[kUserProfileKey][kUserProfileNameKey];
     [self checkForNewChats];
 
     self.chatTimer = [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(checkForNewChats) userInfo:nil repeats:YES];
@@ -88,7 +89,7 @@
 - (id<JSQMessageBubbleImageDataSource>)collectionView:(JSQMessagesCollectionView *)collectionView messageBubbleImageDataForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PFObject *chat = self.chats[indexPath.row];
-    PFUser *fromUser = chat[@"fromUser"];
+    PFUser *fromUser = chat[kChatFromUserKey];
 
     if ([fromUser.objectId isEqual:self.currentUser.objectId]) {
         return [[[JSQMessagesBubbleImageFactory alloc] init] outgoingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleGreenColor]];
@@ -105,8 +106,8 @@
 - (id<JSQMessageData>)collectionView:(JSQMessagesCollectionView *)collectionView messageDataForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PFObject *chat = self.chats[indexPath.row];
-    PFUser *fromUser = chat[@"fromUser"];
-    JSQMessage *message = [[JSQMessage alloc] initWithSenderId:fromUser.objectId senderDisplayName:fromUser[@"profile"][@"name"] date:chat.createdAt text:chat[@"text"]];
+    PFUser *fromUser = chat[kChatFromUserKey];
+    JSQMessage *message = [[JSQMessage alloc] initWithSenderId:fromUser.objectId senderDisplayName:fromUser[kUserProfileKey][kUserProfileNameKey] date:chat.createdAt text:chat[kChatTextKey]];
 
     return message;
 }
@@ -116,11 +117,11 @@
 - (void)didPressSendButton:(UIButton *)button withMessageText:(NSString *)text senderId:(NSString *)senderId senderDisplayName:(NSString *)senderDisplayName date:(NSDate *)date
 {
     if (text.length) {
-        PFObject *chat = [PFObject objectWithClassName:@"Chat"];
-        [chat setObject:self.chatroom forKey:@"chatroom"];
-        [chat setObject:self.currentUser forKey:@"fromUser"];
-        [chat setObject:self.withUser forKey:@"toUser"];
-        [chat setObject:text forKey:@"text"];
+        PFObject *chat = [PFObject objectWithClassName:kChatClassKey];
+        [chat setObject:self.chatroom forKey:kChatChatroomKey];
+        [chat setObject:self.currentUser forKey:kChatFromUserKey];
+        [chat setObject:self.withUser forKey:kChatToUserKey];
+        [chat setObject:text forKey:kChatTextKey];
         [chat saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             [self.chats addObject:chat];
             [JSQSystemSoundPlayer jsq_playMessageSentSound];
@@ -146,10 +147,10 @@
 - (void)checkForNewChats
 {
     int oldChatCount = [self.chats count];
-    PFQuery *query = [PFQuery queryWithClassName:@"Chat"];
-    [query whereKey:@"chatroom" equalTo:self.chatroom];
-    [query includeKey:@"fromUser"];
-    [query includeKey:@"toUser"];
+    PFQuery *query = [PFQuery queryWithClassName:kChatClassKey];
+    [query whereKey:kChatChatroomKey equalTo:self.chatroom];
+    [query includeKey:kChatFromUserKey];
+    [query includeKey:kChatToUserKey];
     [query orderByAscending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
