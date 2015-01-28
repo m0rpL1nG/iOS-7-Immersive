@@ -68,7 +68,6 @@
     PFUser *likedUser = [user1.objectId isEqual:currentUser.objectId] ? [chatroom objectForKey:@"user2"] : [chatroom objectForKey:@"user1"];
 
     cell.textLabel.text = likedUser[@"profile"][@"firstName"];
-    // cell.imageView.image = place holder image
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 
     PFQuery *queryForPhoto = [[PFQuery alloc] initWithClassName:@"Photo"];
