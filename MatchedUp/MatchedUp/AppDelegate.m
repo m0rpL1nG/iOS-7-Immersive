@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Mixpanel.h>
 
 @interface AppDelegate ()
 
@@ -24,15 +25,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // Initialize Parse
     [Parse setApplicationId:@"XERpKiGldfcH54waoWAfibsbBwHMUU0XixU0lTf3"
                   clientKey:@"TQXGLbRMTVrICEOFoEAsrArbaCIMYJ25GrcFShcF"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFFacebookUtils initializeFacebook];
 
+    // Initialize MixPanel
+    [Mixpanel sharedInstanceWithToken:@"82e1e0ec3248bdd2e3e22b8715c8b62b"];
+
+    // Initialize default preferences
     NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefsFile" ofType:@"plist"];
     NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
 
+    // Set some default appearance settings for navigation controller
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:12 / 255.0 green:158 / 255.0 blue:255/255.0 alpha:1.0], NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0]}];
 

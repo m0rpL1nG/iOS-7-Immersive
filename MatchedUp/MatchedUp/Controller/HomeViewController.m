@@ -12,6 +12,7 @@
 #import "ProfileViewController.h"
 #import "MatchViewController.h"
 #import "TransitionAnimator.h"
+#import <Mixpanel.h>
 
 @interface HomeViewController () <MatchViewControllerDelegate, ProfileViewControllerDelegate, UIViewControllerTransitioningDelegate>
 
@@ -122,11 +123,23 @@
 
 - (IBAction)likeButtonPressed:(UIButton *)sender
 {
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"Like"];
+    [mixpanel flush];
+
+    [PFAnalytics trackEvent:@"Like"];
+
     [self checkActivity:@"like"];
 }
 
 - (IBAction)dislikeButtonPressed:(UIButton *)sender
 {
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"Dislike"];
+    [mixpanel flush];
+
+    [PFAnalytics trackEvent:@"Dislike"];
+
     [self checkActivity:@"dislike"];
 }
 
