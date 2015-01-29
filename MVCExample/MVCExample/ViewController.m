@@ -69,9 +69,7 @@
     if (nil == cell) {
         cell = [[TaskTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    Task *task = self.tasks[indexPath.row];
-    cell.taskTitle.text = task.title;
-    cell.isCompleted = task.isCompleted;
+    cell.task = self.tasks[indexPath.row];
 
     return cell;
 }
@@ -81,8 +79,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Task *task = self.tasks[indexPath.row];
-
     task.isCompleted = !task.isCompleted;
+
+    [self.tableView reloadData];
 }
 
 @end

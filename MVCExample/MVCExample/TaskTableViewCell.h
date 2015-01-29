@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Task.h"
 
 @interface TaskTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *taskTitle;
-@property (assign) BOOL isCompleted;
+@property (strong, nonatomic) Task *task;
 
 @end
