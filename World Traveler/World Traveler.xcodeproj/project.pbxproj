@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6754D7D61AC981C2004A0DAE /* AFMMRecordResponseSerializer in Resources */ = {isa = PBXBuildFile; fileRef = 6754D7D51AC981C2004A0DAE /* AFMMRecordResponseSerializer */; };
+		6754D7D91AC98478004A0DAE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7D81AC98478004A0DAE /* MapViewController.m */; };
 		67BC68A01AC97DF300413962 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BC689F1AC97DF300413962 /* main.m */; };
 		67BC68A31AC97DF300413962 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BC68A21AC97DF300413962 /* AppDelegate.m */; };
 		67BC68A61AC97DF300413962 /* World_Traveler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67BC68A41AC97DF300413962 /* World_Traveler.xcdatamodeld */; };
@@ -34,6 +35,8 @@
 		49506993C6779C98717D5F95 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		60A9333ADE9173B3762E5B1E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6754D7D51AC981C2004A0DAE /* AFMMRecordResponseSerializer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AFMMRecordResponseSerializer; sourceTree = "<group>"; };
+		6754D7D71AC98478004A0DAE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6754D7D81AC98478004A0DAE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		67BC689A1AC97DF200413962 /* World Traveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Traveler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BC689E1AC97DF300413962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67BC689F1AC97DF300413962 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				67BC68AF1AC97DF300413962 /* LaunchScreen.xib */,
 				67BC68A41AC97DF300413962 /* World_Traveler.xcdatamodeld */,
 				67BC689D1AC97DF300413962 /* Supporting Files */,
+				6754D7D71AC98478004A0DAE /* MapViewController.h */,
+				6754D7D81AC98478004A0DAE /* MapViewController.m */,
 			);
 			path = "World Traveler";
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			files = (
 				67BC68A31AC97DF300413962 /* AppDelegate.m in Sources */,
 				67BC68A61AC97DF300413962 /* World_Traveler.xcdatamodeld in Sources */,
+				6754D7D91AC98478004A0DAE /* MapViewController.m in Sources */,
 				67BC68A91AC97DF300413962 /* ListViewController.m in Sources */,
 				67BC68A01AC97DF300413962 /* main.m in Sources */,
 			);
@@ -420,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "World Traveler/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -431,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "World Traveler/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
