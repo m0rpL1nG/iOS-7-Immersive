@@ -13,13 +13,15 @@
 #import "AFMMRecordResponseSerializationMapper.h"
 #import "Location.h"
 #import "Venue.h"
+#import "MapViewController.h"
 
 static NSString * const kClientId = @"CWISRYMJK3KRHUPICYARH1YDXB403Y1MQFQA02YWH4AM2US3";
 static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUYLQ2HW2TKHX";
 
-@interface ListViewController ()
+@interface ListViewController () <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSArray *venues;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -28,6 +30,12 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    self.locationManager.distanceFilter = 10.0;
+    [self.locationManager requestWhenInUseAuthorization];
+
     FoursquareSessionManager *sessionManager = [FoursquareSessionManager sharedClient];
     NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
     AFHTTPResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
@@ -50,14 +58,8 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
 
 - (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender
 {
-    FoursquareSessionManager *sharedClient = [FoursquareSessionManager sharedClient];
-    [sharedClient GET:@"venues/search?ll=30.25,-97.75" parameters:@{@"client_id": kClientId, @"client_secret": kClientSecret, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSArray *venues = responseObject;
-        self.venues = venues;
-        [self.tableView reloadData];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"%@", error);
-    }];
+    NSLog(@"Pressed");
+    [self.locationManager startUpdatingLocation];
 }
 
 #pragma mark - UITableViewDataSource
@@ -82,6 +84,24 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
     cell.detailTextLabel.text = venue.location.address;
 
     return cell;
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"Delegate");
+    CLLocation *location = [locations lastObject];
+    [self.locationManager stopUpdatingLocation];
+
+    FoursquareSessionManager *sharedClient = [FoursquareSessionManager sharedClient];
+    [sharedClient GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude, location.coordinate.longitude] parameters:@{@"client_id": kClientId, @"client_secret": kClientSecret, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSArray *venues = responseObject;
+        self.venues = venues;
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 @end
