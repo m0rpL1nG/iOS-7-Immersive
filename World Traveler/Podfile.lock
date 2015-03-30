@@ -21,20 +21,20 @@ PODS:
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
   - MBProgressHUD (0.8)
-  - MMRecord (1.2.0):
-    - MMRecord/Core (= 1.2.0)
-  - MMRecord/Core (1.2.0)
+  - MMRecord (1.4.1):
+    - MMRecord/Core (= 1.4.1)
+  - MMRecord/Core (1.4.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.1.0)
   - MagicalRecord (~> 2.2.0)
   - MBProgressHud (~> 0.8.0)
-  - MMRecord (~> 1.2.0)
+  - MMRecord (~> 1.4.0)
 
 SPEC CHECKSUMS:
   AFNetworking: d397c9a76a60c670cbcd33f3ff2c5f961f724cbc
   MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
   MBProgressHUD: 8688c331cb64702283be37ab8d7d329cdd25f251
-  MMRecord: 7d76a35e0e95f70b9f482eca721b38c922ccbce0
+  MMRecord: 1acac5fd8beeae77d7ecd8b4c9714731dd64751a
 
 COCOAPODS: 0.35.0

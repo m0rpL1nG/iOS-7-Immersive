@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6754D7D61AC981C2004A0DAE /* AFMMRecordResponseSerializer in Resources */ = {isa = PBXBuildFile; fileRef = 6754D7D51AC981C2004A0DAE /* AFMMRecordResponseSerializer */; };
 		6754D7D91AC98478004A0DAE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7D81AC98478004A0DAE /* MapViewController.m */; };
 		6754D7DF1AC98E26004A0DAE /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7DE1AC98E26004A0DAE /* Contact.m */; };
 		6754D7E21AC98E27004A0DAE /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7E11AC98E27004A0DAE /* Venue.m */; };
@@ -15,6 +14,9 @@
 		6754D7E81AC98E27004A0DAE /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7E71AC98E27004A0DAE /* Menu.m */; };
 		6754D7EB1AC98E27004A0DAE /* FSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7EA1AC98E27004A0DAE /* FSCategory.m */; };
 		6754D7EE1AC98EF2004A0DAE /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7ED1AC98EF2004A0DAE /* Record.m */; };
+		6754D7F21AC9935A004A0DAE /* FoursquareSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7F11AC9935A004A0DAE /* FoursquareSessionManager.m */; };
+		6754D8011AC9A2A5004A0DAE /* AFMMRecordResponseSerializationMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7FE1AC9A2A5004A0DAE /* AFMMRecordResponseSerializationMapper.m */; };
+		6754D8021AC9A2A5004A0DAE /* AFMMRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D8001AC9A2A5004A0DAE /* AFMMRecordResponseSerializer.m */; };
 		67BC68A01AC97DF300413962 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BC689F1AC97DF300413962 /* main.m */; };
 		67BC68A31AC97DF300413962 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BC68A21AC97DF300413962 /* AppDelegate.m */; };
 		67BC68A61AC97DF300413962 /* World_Traveler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67BC68A41AC97DF300413962 /* World_Traveler.xcdatamodeld */; };
@@ -40,7 +42,6 @@
 		32368599EEB6608F78B0EB63 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		49506993C6779C98717D5F95 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		60A9333ADE9173B3762E5B1E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		6754D7D51AC981C2004A0DAE /* AFMMRecordResponseSerializer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AFMMRecordResponseSerializer; sourceTree = "<group>"; };
 		6754D7D71AC98478004A0DAE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		6754D7D81AC98478004A0DAE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		6754D7DD1AC98E26004A0DAE /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
@@ -55,6 +56,12 @@
 		6754D7EA1AC98E27004A0DAE /* FSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCategory.m; sourceTree = "<group>"; };
 		6754D7EC1AC98EF2004A0DAE /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
 		6754D7ED1AC98EF2004A0DAE /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
+		6754D7F01AC9935A004A0DAE /* FoursquareSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareSessionManager.h; sourceTree = "<group>"; };
+		6754D7F11AC9935A004A0DAE /* FoursquareSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareSessionManager.m; sourceTree = "<group>"; };
+		6754D7FD1AC9A2A5004A0DAE /* AFMMRecordResponseSerializationMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializationMapper.h; sourceTree = "<group>"; };
+		6754D7FE1AC9A2A5004A0DAE /* AFMMRecordResponseSerializationMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializationMapper.m; sourceTree = "<group>"; };
+		6754D7FF1AC9A2A5004A0DAE /* AFMMRecordResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializer.h; sourceTree = "<group>"; };
+		6754D8001AC9A2A5004A0DAE /* AFMMRecordResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializer.m; sourceTree = "<group>"; };
 		67BC689A1AC97DF200413962 /* World Traveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Traveler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BC689E1AC97DF300413962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67BC689F1AC97DF300413962 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,7 +109,7 @@
 		6754D7D41AC98190004A0DAE /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				6754D7D51AC981C2004A0DAE /* AFMMRecordResponseSerializer */,
+				6754D7FC1AC9A2A5004A0DAE /* AFMMRecordResponseSerializer */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -148,6 +155,26 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		6754D7EF1AC99336004A0DAE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6754D7F01AC9935A004A0DAE /* FoursquareSessionManager.h */,
+				6754D7F11AC9935A004A0DAE /* FoursquareSessionManager.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		6754D7FC1AC9A2A5004A0DAE /* AFMMRecordResponseSerializer */ = {
+			isa = PBXGroup;
+			children = (
+				6754D7FD1AC9A2A5004A0DAE /* AFMMRecordResponseSerializationMapper.h */,
+				6754D7FE1AC9A2A5004A0DAE /* AFMMRecordResponseSerializationMapper.m */,
+				6754D7FF1AC9A2A5004A0DAE /* AFMMRecordResponseSerializer.h */,
+				6754D8001AC9A2A5004A0DAE /* AFMMRecordResponseSerializer.m */,
+			);
+			path = AFMMRecordResponseSerializer;
+			sourceTree = "<group>";
+		};
 		67BC68911AC97DF200413962 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +198,7 @@
 		67BC689C1AC97DF200413962 /* World Traveler */ = {
 			isa = PBXGroup;
 			children = (
+				6754D7EF1AC99336004A0DAE /* API */,
 				6754D7DC1AC98728004A0DAE /* Controller */,
 				6754D7DB1AC98701004A0DAE /* Model */,
 				6754D7DA1AC986FA004A0DAE /* Initialization */,
@@ -299,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67BC68AC1AC97DF300413962 /* Main.storyboard in Resources */,
-				6754D7D61AC981C2004A0DAE /* AFMMRecordResponseSerializer in Resources */,
 				67BC68B11AC97DF300413962 /* LaunchScreen.xib in Resources */,
 				67BC68AE1AC97DF300413962 /* Images.xcassets in Resources */,
 			);
@@ -354,13 +381,16 @@
 			files = (
 				6754D7EB1AC98E27004A0DAE /* FSCategory.m in Sources */,
 				67BC68A31AC97DF300413962 /* AppDelegate.m in Sources */,
+				6754D8021AC9A2A5004A0DAE /* AFMMRecordResponseSerializer.m in Sources */,
 				67BC68A61AC97DF300413962 /* World_Traveler.xcdatamodeld in Sources */,
 				6754D7E21AC98E27004A0DAE /* Venue.m in Sources */,
 				6754D7D91AC98478004A0DAE /* MapViewController.m in Sources */,
+				6754D8011AC9A2A5004A0DAE /* AFMMRecordResponseSerializationMapper.m in Sources */,
 				67BC68A91AC97DF300413962 /* ListViewController.m in Sources */,
 				6754D7EE1AC98EF2004A0DAE /* Record.m in Sources */,
 				6754D7DF1AC98E26004A0DAE /* Contact.m in Sources */,
 				6754D7E51AC98E27004A0DAE /* Location.m in Sources */,
+				6754D7F21AC9935A004A0DAE /* FoursquareSessionManager.m in Sources */,
 				67BC68A01AC97DF300413962 /* main.m in Sources */,
 				6754D7E81AC98E27004A0DAE /* Menu.m in Sources */,
 			);

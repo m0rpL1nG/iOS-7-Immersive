@@ -10,15 +10,15 @@
 #import <CoreData/CoreData.h>
 #import "Record.h"
 
-@class Contact;
+@class Contact, FSCategory, Location, Menu;
 
 @interface Venue : Record
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * id;
-@property (nonatomic, retain) NSManagedObject *categories;
+@property (nonatomic, retain) FSCategory *categories;
 @property (nonatomic, retain) Contact *contact;
-@property (nonatomic, retain) NSManagedObject *location;
-@property (nonatomic, retain) NSManagedObject *menu;
+@property (nonatomic, retain) Location *location;
+@property (nonatomic, retain) Menu *menu;
 
 @end

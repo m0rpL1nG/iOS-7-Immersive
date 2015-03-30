@@ -7,8 +7,19 @@
 //
 
 #import "ListViewController.h"
+#import <CoreData+MagicalRecord.h>
+#import "FoursquareSessionManager.h"
+#import "AFMMRecordResponseSerializer.h"
+#import "AFMMRecordResponseSerializationMapper.h"
+#import "Location.h"
+#import "Venue.h"
+
+static NSString * const kClientId = @"CWISRYMJK3KRHUPICYARH1YDXB403Y1MQFQA02YWH4AM2US3";
+static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUYLQ2HW2TKHX";
 
 @interface ListViewController ()
+
+@property (strong, nonatomic) NSArray *venues;
 
 @end
 
@@ -17,6 +28,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    FoursquareSessionManager *sessionManager = [FoursquareSessionManager sharedClient];
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+    AFHTTPResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
+    AFMMRecordResponseSerializationMapper *mapper = [[AFMMRecordResponseSerializationMapper alloc] init];
+    [mapper registerEntityName:@"Venue" forEndpointPathComponent:@"venues/search?"];
+    AFMMRecordResponseSerializer *serializer = nil;
+    serializer = [AFMMRecordResponseSerializer serializerWithManagedObjectContext:context responseObjectSerializer:responseSerializer entityMapper:mapper];
+    sessionManager.responseSerializer = serializer;
+
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +46,42 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender {
+#pragma mark - IBActions
+
+- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender
+{
+    FoursquareSessionManager *sharedClient = [FoursquareSessionManager sharedClient];
+    [sharedClient GET:@"venues/search?ll=30.25,-97.75" parameters:@{@"client_id": kClientId, @"client_secret": kClientSecret, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSArray *venues = responseObject;
+        self.venues = venues;
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.venues count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+
+    Venue *venue = self.venues[indexPath.row];
+    cell.textLabel.text = venue.name;
+    cell.detailTextLabel.text = venue.location.address;
+
+    return cell;
+}
+
 @end
