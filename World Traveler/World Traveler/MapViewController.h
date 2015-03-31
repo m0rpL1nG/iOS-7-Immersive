@@ -13,6 +13,11 @@
 @interface MapViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+
 @property (strong, nonatomic) Venue *venue;
+
+- (IBAction)showDirectionsBarButtonItemPressed:(UIBarButtonItem *)sender;
 
 @end

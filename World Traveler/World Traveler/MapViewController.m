@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.nameLabel.text = self.venue.name;
+    self.addressLabel.text = self.venue.location.address;
+
     float latitude = [self.venue.location.lat floatValue];
     float longitude = [self.venue.location.lng floatValue];
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
@@ -46,5 +49,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)showDirectionsBarButtonItemPressed:(UIBarButtonItem *)sender
+{
+    [self performSegueWithIdentifier:@"MapToDirectionsSegue" sender:nil];
+}
 
 @end
