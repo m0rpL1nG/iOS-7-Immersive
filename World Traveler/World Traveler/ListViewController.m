@@ -54,11 +54,20 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = sender;
+    Venue *venue = self.venues[indexPath.row];
+    MapViewController *mapVC = segue.destinationViewController;
+    mapVC.venue = venue;
+}
+
 #pragma mark - IBActions
 
 - (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender
 {
-    NSLog(@"Pressed");
     [self.locationManager startUpdatingLocation];
 }
 
@@ -90,7 +99,6 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    NSLog(@"Delegate");
     CLLocation *location = [locations lastObject];
     [self.locationManager stopUpdatingLocation];
 
@@ -102,6 +110,13 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"ListToMapSegue" sender:indexPath];
 }
 
 @end
