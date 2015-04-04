@@ -61,6 +61,7 @@
 
     cell.textLabel.text = step.instructions;
     cell.detailTextLabel.text = step.notice;
+    [self loadSnapshots:indexPath];
 
     return cell;
 }
@@ -74,6 +75,38 @@
     label.text = [NSString stringWithFormat:@"Route %li", section + 1];
 
     return label;
+}
+
+#pragma mark - Helper methods
+
+- (void)loadSnapshots:(NSIndexPath *)indexPath
+{
+    MKRoute *route = self.steps[indexPath.section];
+    MKRouteStep *step = route.steps[indexPath.row];
+    MKMapSnapshotOptions *options = [[MKMapSnapshotOptions alloc] init];
+    options.scale = [UIScreen mainScreen].scale;
+
+    MKMapRect rect;
+    rect.origin = step.polyline.points[0];
+    rect.size = MKMapSizeMake(0.0, 0.0);
+
+    MKCoordinateRegion region = MKCoordinateRegionForMapRect(rect);
+    region.span.latitudeDelta = 0.001;
+    region.span.longitudeDelta = 0.001;
+
+    options.region = region;
+    options.size = CGSizeMake(40.0, 40.0);
+
+    MKMapSnapshotter *snapshotter = [[MKMapSnapshotter alloc] initWithOptions:options];
+    [snapshotter startWithCompletionHandler:^(MKMapSnapshot *snapshot, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+            cell.imageView.image = snapshot.image;
+            [cell setNeedsLayout];
+        }
+    }];
 }
 
 @end
