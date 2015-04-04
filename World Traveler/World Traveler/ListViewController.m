@@ -18,6 +18,9 @@
 static NSString * const kClientId = @"CWISRYMJK3KRHUPICYARH1YDXB403Y1MQFQA02YWH4AM2US3";
 static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUYLQ2HW2TKHX";
 
+#define latitudeOffset 0.01
+#define longitudeOffset 0.01
+
 @interface ListViewController () <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSArray *venues;
@@ -103,7 +106,7 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
     [self.locationManager stopUpdatingLocation];
 
     FoursquareSessionManager *sharedClient = [FoursquareSessionManager sharedClient];
-    [sharedClient GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude, location.coordinate.longitude] parameters:@{@"client_id": kClientId, @"client_secret": kClientSecret, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
+    [sharedClient GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude + latitudeOffset, location.coordinate.longitude + longitudeOffset] parameters:@{@"client_id": kClientId, @"client_secret": kClientSecret, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
         NSArray *venues = responseObject;
         self.venues = venues;
         [self.tableView reloadData];

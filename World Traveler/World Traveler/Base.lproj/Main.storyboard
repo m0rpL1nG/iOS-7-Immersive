@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="1159" y="319"/>
         </scene>
-        <!--View Controller-->
+        <!--Directions View Controller-->
         <scene sceneID="yO1-cj-8hM">
             <objects>
-                <viewController id="cGY-sz-Xcb" sceneMemberID="viewController">
+                <viewController id="cGY-sz-Xcb" customClass="DirectionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U3i-Pi-5j1"/>
                         <viewControllerLayoutGuide type="bottom" id="hph-XP-46z"/>
@@ -128,9 +128,23 @@
                     <view key="view" contentMode="scaleToFill" id="03L-4x-bmp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cwq-aJ-ssM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0s3-N8-TDt"/>
+                    <navigationItem key="navigationItem" id="0s3-N8-TDt">
+                        <barButtonItem key="rightBarButtonItem" title="List Directions" id="e1m-hm-mKz">
+                            <connections>
+                                <action selector="listDirectionsBarButtonItemPressed:" destination="cGY-sz-Xcb" id="vrG-3p-hRl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="directionsMap" destination="cwq-aJ-ssM" id="PJq-cz-F81"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYN-2T-xrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

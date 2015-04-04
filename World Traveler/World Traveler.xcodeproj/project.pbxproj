@@ -25,6 +25,7 @@
 		67BC68AE1AC97DF300413962 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67BC68AD1AC97DF300413962 /* Images.xcassets */; };
 		67BC68B11AC97DF300413962 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67BC68AF1AC97DF300413962 /* LaunchScreen.xib */; };
 		67BC68BD1AC97DF300413962 /* World_TravelerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BC68BC1AC97DF300413962 /* World_TravelerTests.m */; };
+		67F5061A1ACA9D4900D468BB /* DirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F506191ACA9D4900D468BB /* DirectionsViewController.m */; };
 		FD289F91B7BEB308E30556A2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32368599EEB6608F78B0EB63 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		67BC68B61AC97DF300413962 /* World TravelerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World TravelerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BC68BB1AC97DF300413962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67BC68BC1AC97DF300413962 /* World_TravelerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = World_TravelerTests.m; sourceTree = "<group>"; };
+		67F506181ACA9D4900D468BB /* DirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsViewController.h; sourceTree = "<group>"; };
+		67F506191ACA9D4900D468BB /* DirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				67BC68A81AC97DF300413962 /* ListViewController.m */,
 				6754D7D71AC98478004A0DAE /* MapViewController.h */,
 				6754D7D81AC98478004A0DAE /* MapViewController.m */,
+				67F506181ACA9D4900D468BB /* DirectionsViewController.h */,
+				67F506191ACA9D4900D468BB /* DirectionsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				6754D7EE1AC98EF2004A0DAE /* Record.m in Sources */,
 				6754D7DF1AC98E26004A0DAE /* Contact.m in Sources */,
 				6754D7E51AC98E27004A0DAE /* Location.m in Sources */,
+				67F5061A1ACA9D4900D468BB /* DirectionsViewController.m in Sources */,
 				6754D7F21AC9935A004A0DAE /* FoursquareSessionManager.m in Sources */,
 				67BC68A01AC97DF300413962 /* main.m in Sources */,
 				6754D7E81AC98E27004A0DAE /* Menu.m in Sources */,
