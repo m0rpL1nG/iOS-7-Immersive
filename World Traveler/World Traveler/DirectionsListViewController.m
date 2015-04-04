@@ -65,4 +65,15 @@
     return cell;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor blueColor];
+    label.font = [UIFont boldSystemFontOfSize:14];
+    label.text = [NSString stringWithFormat:@"Route %li", section + 1];
+
+    return label;
+}
+
 @end
