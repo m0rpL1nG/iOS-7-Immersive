@@ -14,6 +14,7 @@
 #import "Location.h"
 #import "Venue.h"
 #import "MapViewController.h"
+#import "AppDelegate.h"
 
 static NSString * const kClientId = @"CWISRYMJK3KRHUPICYARH1YDXB403Y1MQFQA02YWH4AM2US3";
 static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUYLQ2HW2TKHX";
@@ -74,6 +75,11 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
     [self.locationManager startUpdatingLocation];
 }
 
+- (IBAction)menuBarButtonItemPressed:(UIBarButtonItem *)sender
+{
+    [[self drawerControllerFromAppDelegate] toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -120,6 +126,15 @@ static NSString * const kClientSecret = @"YGFHTQ0IFNXHOZ2RDO045YAGEWY1HD51F4KSUY
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"ListToMapSegue" sender:indexPath];
+}
+
+#pragma mark - DrawerController
+
+- (MMDrawerController *)drawerControllerFromAppDelegate
+{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    return appDelegate.drawerController;
 }
 
 @end

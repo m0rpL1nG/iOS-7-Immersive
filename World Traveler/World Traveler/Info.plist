@@ -22,10 +22,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Should not be used</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use your location to display the venues near you.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -36,9 +38,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We use your location to display the venues near you.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Should not be used</string>
 </dict>
 </plist>
