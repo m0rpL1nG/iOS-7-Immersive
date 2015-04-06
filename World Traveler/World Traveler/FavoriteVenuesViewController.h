@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavoriteVenuesViewController : UIViewController
+@interface FavoriteVenuesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)menuBarButtonItemPressed:(UIBarButtonItem *)sender;

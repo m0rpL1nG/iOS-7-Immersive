@@ -40,6 +40,7 @@
         </userInfo>
     </entity>
     <entity name="Venue" representedClassName="Venue" syncable="YES">
+        <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FSCategory" inverseName="venue" inverseEntity="FSCategory" syncable="YES"/>
@@ -55,6 +56,6 @@
         <element name="FSCategory" positionX="-54" positionY="9" width="128" height="88"/>
         <element name="Location" positionX="-36" positionY="27" width="128" height="193"/>
         <element name="Menu" positionX="-18" positionY="99" width="128" height="88"/>
-        <element name="Venue" positionX="0" positionY="108" width="128" height="133"/>
+        <element name="Venue" positionX="0" positionY="108" width="128" height="150"/>
     </elements>
 </model>

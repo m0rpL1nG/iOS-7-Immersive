@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6754D7D91AC98478004A0DAE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7D81AC98478004A0DAE /* MapViewController.m */; };
 		6754D7DF1AC98E26004A0DAE /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7DE1AC98E26004A0DAE /* Contact.m */; };
-		6754D7E21AC98E27004A0DAE /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7E11AC98E27004A0DAE /* Venue.m */; };
 		6754D7E51AC98E27004A0DAE /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7E41AC98E27004A0DAE /* Location.m */; };
 		6754D7E81AC98E27004A0DAE /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7E71AC98E27004A0DAE /* Menu.m */; };
 		6754D7EB1AC98E27004A0DAE /* FSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6754D7EA1AC98E27004A0DAE /* FSCategory.m */; };
@@ -30,6 +29,7 @@
 		67C728AA1AD1DD570042304E /* MenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67C728A91AD1DD570042304E /* MenuIcon.png */; };
 		67C728AD1AD25DCC0042304E /* FavoriteVenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C728AC1AD25DCC0042304E /* FavoriteVenuesViewController.m */; };
 		67C728B01AD25DDD0042304E /* AddVenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C728AF1AD25DDD0042304E /* AddVenueViewController.m */; };
+		67C728B31AD264370042304E /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C728B21AD264370042304E /* Venue.m */; };
 		67F5061A1ACA9D4900D468BB /* DirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F506191ACA9D4900D468BB /* DirectionsViewController.m */; };
 		FD289F91B7BEB308E30556A2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32368599EEB6608F78B0EB63 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -52,8 +52,6 @@
 		6754D7D81AC98478004A0DAE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		6754D7DD1AC98E26004A0DAE /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		6754D7DE1AC98E26004A0DAE /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
-		6754D7E01AC98E27004A0DAE /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
-		6754D7E11AC98E27004A0DAE /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		6754D7E31AC98E27004A0DAE /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		6754D7E41AC98E27004A0DAE /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		6754D7E61AC98E27004A0DAE /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
@@ -91,6 +89,8 @@
 		67C728AC1AD25DCC0042304E /* FavoriteVenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteVenuesViewController.m; sourceTree = "<group>"; };
 		67C728AE1AD25DDD0042304E /* AddVenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVenueViewController.h; sourceTree = "<group>"; };
 		67C728AF1AD25DDD0042304E /* AddVenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVenueViewController.m; sourceTree = "<group>"; };
+		67C728B11AD264370042304E /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		67C728B21AD264370042304E /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		67F506181ACA9D4900D468BB /* DirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsViewController.h; sourceTree = "<group>"; };
 		67F506191ACA9D4900D468BB /* DirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,14 +145,14 @@
 			isa = PBXGroup;
 			children = (
 				67BC68A41AC97DF300413962 /* World_Traveler.xcdatamodeld */,
+				67C728B11AD264370042304E /* Venue.h */,
+				67C728B21AD264370042304E /* Venue.m */,
 				6754D7E91AC98E27004A0DAE /* FSCategory.h */,
 				6754D7EA1AC98E27004A0DAE /* FSCategory.m */,
 				6754D7E61AC98E27004A0DAE /* Menu.h */,
 				6754D7E71AC98E27004A0DAE /* Menu.m */,
 				6754D7E31AC98E27004A0DAE /* Location.h */,
 				6754D7E41AC98E27004A0DAE /* Location.m */,
-				6754D7E01AC98E27004A0DAE /* Venue.h */,
-				6754D7E11AC98E27004A0DAE /* Venue.m */,
 				6754D7DD1AC98E26004A0DAE /* Contact.h */,
 				6754D7DE1AC98E26004A0DAE /* Contact.m */,
 				6754D7EC1AC98EF2004A0DAE /* Record.h */,
@@ -414,9 +414,9 @@
 				67BC68A31AC97DF300413962 /* AppDelegate.m in Sources */,
 				6754D8021AC9A2A5004A0DAE /* AFMMRecordResponseSerializer.m in Sources */,
 				67BC68A61AC97DF300413962 /* World_Traveler.xcdatamodeld in Sources */,
-				6754D7E21AC98E27004A0DAE /* Venue.m in Sources */,
 				6754D7D91AC98478004A0DAE /* MapViewController.m in Sources */,
 				6754D8011AC9A2A5004A0DAE /* AFMMRecordResponseSerializationMapper.m in Sources */,
+				67C728B31AD264370042304E /* Venue.m in Sources */,
 				67C728B01AD25DDD0042304E /* AddVenueViewController.m in Sources */,
 				67BC68A91AC97DF300413962 /* ListViewController.m in Sources */,
 				67C6E22F1AD06E350042FF52 /* DirectionsListViewController.m in Sources */,

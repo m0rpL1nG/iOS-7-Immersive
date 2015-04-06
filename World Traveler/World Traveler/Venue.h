@@ -2,7 +2,7 @@
 //  Venue.h
 //  World Traveler
 //
-//  Created by Pierre-Yves LEBECQ on 30/03/2015.
+//  Created by Pierre-Yves LEBECQ on 06/04/2015.
 //  Copyright (c) 2015 Pierre-Yves Lebecq. All rights reserved.
 //
 
@@ -14,8 +14,9 @@
 
 @interface Venue : Record
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * id;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * favorite;
 @property (nonatomic, retain) FSCategory *categories;
 @property (nonatomic, retain) Contact *contact;
 @property (nonatomic, retain) Location *location;

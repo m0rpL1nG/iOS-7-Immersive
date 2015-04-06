@@ -19,5 +19,6 @@
 @property (strong, nonatomic) Venue *venue;
 
 - (IBAction)showDirectionsBarButtonItemPressed:(UIBarButtonItem *)sender;
+- (IBAction)favoriteButtonPressed:(UIButton *)sender;
 
 @end
